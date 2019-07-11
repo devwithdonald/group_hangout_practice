@@ -4,9 +4,9 @@ import java.util.List;
 
 public class BusinessUser extends User {
 
-	String businessName;
-	String location;
-	List<Subscriptions> subscriberList;
+	private String businessName;
+	private String location;
+	private List<Subscriptions> subscriberList;
 	
 	public BusinessUser() {
 		super();

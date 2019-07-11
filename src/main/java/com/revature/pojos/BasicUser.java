@@ -3,10 +3,10 @@ package com.revature.pojos;
 import java.util.List;
 
 public class BasicUser extends User{
-	String firstName;
-	String lastName;
-	List<Friends> friendList;
-	List<Subscriptions> subscriptionList;
+	private String firstName;
+	private String lastName;
+	private List<Friends> friendList;
+	private List<Subscriptions> subscriptionList;
 	
 	public BasicUser() {
 		super();
