@@ -6,7 +6,7 @@ public class BusinessUser extends User {
 
 	private String businessName;
 	private String location;
-	private List<Subscriptions> subscriberList;
+	private List<Subscription> subscriberList;
 	
 	public BusinessUser() {
 		super();
@@ -17,7 +17,7 @@ public class BusinessUser extends User {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public BusinessUser(String businessName, String location, List<Subscriptions> subscriberList) {
+	public BusinessUser(String businessName, String location, List<Subscription> subscriberList) {
 		super();
 		this.businessName = businessName;
 		this.location = location;
@@ -35,10 +35,10 @@ public class BusinessUser extends User {
 	public void setLocation(String location) {
 		this.location = location;
 	}
-	public List<Subscriptions> getSubscriberList() {
+	public List<Subscription> getSubscriberList() {
 		return subscriberList;
 	}
-	public void setSubscriberList(List<Subscriptions> subscriberList) {
+	public void setSubscriberList(List<Subscription> subscriberList) {
 		this.subscriberList = subscriberList;
 	}
 	@Override
