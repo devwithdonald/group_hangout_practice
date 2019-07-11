@@ -9,4 +9,5 @@ public interface UserService {
 
 	public Boolean addUser(User user, String userType);
 
+	public Boolean updateUser(User user);
 }
