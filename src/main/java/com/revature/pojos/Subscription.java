@@ -4,33 +4,33 @@ public class Subscription {
 	private int subscriptionID;
 	private int userID;
 	private int businessID;
-	private String time_stamp;
-	private int rsvp_count;
+	private String timeStamp;
+	private int rsvpCount;
 	
 	public Subscription() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Subscription(int userID, int businessID, String time_stamp, int rsvp_count) {
+	public Subscription(int userID, int businessID, String timeStamp, int rsvpCount) {
 		super();
 		this.userID = userID;
 		this.businessID = businessID;
-		this.time_stamp = time_stamp;
-		this.rsvp_count = rsvp_count;
+		this.timeStamp = timeStamp;
+		this.rsvpCount = rsvpCount;
 	}
 	@Override
 	public String toString() {
 		return "Subscription [subscriptionID=" + subscriptionID + ", userID=" + userID + ", businessID=" + businessID
-				+ ", time_stamp=" + time_stamp + ", rsvp_count=" + rsvp_count + "]";
+				+ ", timeStamp=" + timeStamp + ", rsvpCount=" + rsvpCount + "]";
 	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + businessID;
-		result = prime * result + rsvp_count;
+		result = prime * result + rsvpCount;
 		result = prime * result + subscriptionID;
-		result = prime * result + ((time_stamp == null) ? 0 : time_stamp.hashCode());
+		result = prime * result + ((timeStamp == null) ? 0 : timeStamp.hashCode());
 		result = prime * result + userID;
 		return result;
 	}
@@ -45,14 +45,14 @@ public class Subscription {
 		Subscription other = (Subscription) obj;
 		if (businessID != other.businessID)
 			return false;
-		if (rsvp_count != other.rsvp_count)
+		if (rsvpCount != other.rsvpCount)
 			return false;
 		if (subscriptionID != other.subscriptionID)
 			return false;
-		if (time_stamp == null) {
-			if (other.time_stamp != null)
+		if (timeStamp == null) {
+			if (other.timeStamp != null)
 				return false;
-		} else if (!time_stamp.equals(other.time_stamp))
+		} else if (!timeStamp.equals(other.timeStamp))
 			return false;
 		if (userID != other.userID)
 			return false;
@@ -76,17 +76,17 @@ public class Subscription {
 	public void setBusinessID(int businessID) {
 		this.businessID = businessID;
 	}
-	public String getTime_stamp() {
-		return time_stamp;
+	public String getTimeStamp() {
+		return timeStamp;
 	}
-	public void setTime_stamp(String time_stamp) {
-		this.time_stamp = time_stamp;
+	public void setTimeStamp(String timeStamp) {
+		this.timeStamp = timeStamp;
 	}
-	public int getRsvp_count() {
-		return rsvp_count;
+	public int getRsvpCount() {
+		return rsvpCount;
 	}
-	public void setRsvp_count(int rsvp_count) {
-		this.rsvp_count = rsvp_count;
+	public void setRsvpCount(int rsvpCount) {
+		this.rsvpCount = rsvpCount;
 	}
 
 }
