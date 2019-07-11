@@ -6,7 +6,7 @@ public class BasicUser extends User{
 	private String firstName;
 	private String lastName;
 	private List<Friends> friendList;
-	private List<Subscriptions> subscriptionList;
+	private List<Subscription> subscriptionList;
 	
 	public BasicUser() {
 		super();
@@ -18,7 +18,7 @@ public class BasicUser extends User{
 	}
 	
 	public BasicUser(String firstName, String lastName, List<Friends> friendList,
-			List<Subscriptions> subscriptionList) {
+			List<Subscription> subscriptionList) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -43,10 +43,10 @@ public class BasicUser extends User{
 	public void setFriendList(List<Friends> friendList) {
 		this.friendList = friendList;
 	}
-	public List<Subscriptions> getSubscriptionList() {
+	public List<Subscription> getSubscriptionList() {
 		return subscriptionList;
 	}
-	public void setSubscriptionList(List<Subscriptions> subscriptionList) {
+	public void setSubscriptionList(List<Subscription> subscriptionList) {
 		this.subscriptionList = subscriptionList;
 	}
 	@Override
