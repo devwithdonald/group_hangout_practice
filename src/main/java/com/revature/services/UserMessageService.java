@@ -5,8 +5,8 @@ import java.util.List;
 import com.revature.pojos.UserMessage;
 
 public interface UserMessageService {
-	public void saveMessage(UserMessage uMessage, int senderId, int recieverId);
-	public void sendMessage(UserMessage uMessage, int recieverId);
+	public void saveMessage(UserMessage userMessage, int senderId, int receiverId);
+	public void sendMessage(UserMessage userMessage, int receiverId);
 	public List<UserMessage> getAllMessageByUsername(String username);
 
 }

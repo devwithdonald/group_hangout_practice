@@ -3,9 +3,9 @@ package com.revature.services;
 import com.revature.pojos.BusinessMessage;
 
 public interface BusinessMessageService {
-	public void saveMessage(BusinessMessage bMessage, int businessId);
-	public void sendMessage(String message, int EId, int BId);
-	public BusinessMessage getBusinessMessageByBusiness(int BId);
+	public void saveMessage(BusinessMessage businessMessage, int businessId);
+	public void sendMessage(String message, int employeeId, int businessId);
+	public BusinessMessage getBusinessMessageByBusiness(int businessId);
 	
 
 }
