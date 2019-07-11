@@ -10,11 +10,11 @@ public interface EventDao {
 	
 	public ArrayList<Event> getAllEventsByEventType(String eventType);
 	
-	public Event addBasicUserEvent(Event event);
+	public Boolean addBasicUserEvent(Event event);
 
-	public Event addBusinessPublicEvent(Event event);
+	public Boolean addBusinessPublicEvent(Event event);
 
-	public Event addBusinessPrivateEvent(Event event);
+	public Boolean addBusinessPrivateEvent(Event event);
 
 	public Boolean updateEvent(Event event);
 
@@ -25,8 +25,6 @@ public interface EventDao {
 	public Event viewFriendsEventsByFriendsName(String friendsName);
 	
 	public Boolean addPromotionsToEvent(Event eventId);
-	
-	
 	
 
 }
