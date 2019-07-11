@@ -23,5 +23,10 @@ public interface EventDao {
 	public Boolean sendEventNotificationOut(Event event);
 	
 	public Event viewFriendsEventsByFriendsName(String friendsName);
+	
+	public Boolean addPromotionsToEvent(Event eventId);
+	
+	
+	
 
 }
