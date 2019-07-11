@@ -1,8 +1,10 @@
 package com.revature.dao;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.revature.pojos.Event;
+import com.revature.pojos.User;
 
 public interface EventDao {
 	
@@ -22,9 +24,18 @@ public interface EventDao {
 
 	public Boolean sendEventNotificationOut(Event event);
 	
-	public Event viewFriendsEventsByFriendsName(String friendsName);
-	
 	public Boolean addPromotionsToEvent(Event eventId);
+		
+	public ArrayList<Event> getAllUserEvents();
 	
-
+	public ArrayList<Event> getAllEventsByUser(User user);
+	
+	public ArrayList<Event> getAllBusinessEvents();
+	
+	public ArrayList<Event> getAllFriendEventsByUser(User user);
+	
+	public ArrayList<Event> getAllSubscribedEventsByUser(User user);
+	
+	public ArrayList<Event> viewSummaryOfSubscribedBusinessEvents(User user);
+	
 }
