@@ -1,30 +1,44 @@
 package com.revature.pojos;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="USER")
 public abstract class User {
 	
-	private int id;
+	@Id
+	@Column(name="USER_ID")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int userId;
 	
+	@Column(name="USERNAME")
 	private String username;
 	
+	@Column(name="PASSWORD")
 	private String password;
 	
 	public User() {
 		super();
 	}
 
-	public User(int id, String username, String password) {
+	public User(int userId, String username, String password) {
 		super();
-		this.id = id;
+		this.userId = userId;
 		this.username = username;
 		this.password = password;
 	}
 
-	public int getId() {
-		return id;
+	public int getUserId() {
+		return userId;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
 
 	public String getUsername() {
@@ -47,7 +61,7 @@ public abstract class User {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + id;
+		result = prime * result + userId;
 		result = prime * result + ((password == null) ? 0 : password.hashCode());
 		result = prime * result + ((username == null) ? 0 : username.hashCode());
 		return result;
@@ -62,7 +76,7 @@ public abstract class User {
 		if (getClass() != obj.getClass())
 			return false;
 		User other = (User) obj;
-		if (id != other.id)
+		if (userId != other.userId)
 			return false;
 		if (password == null) {
 			if (other.password != null)
@@ -79,7 +93,7 @@ public abstract class User {
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", username=" + username + ", password=" + password + "]";
+		return "User [userId=" + userId + ", username=" + username + ", password=" + password + "]";
 	}	
 
 }
