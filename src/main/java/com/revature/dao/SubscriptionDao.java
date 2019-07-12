@@ -6,7 +6,7 @@ import com.revature.pojos.BasicUser;
 import com.revature.pojos.BusinessUser;
 import com.revature.pojos.Subscription;
 
-public interface SubscriptionServiceDao {
+public interface SubscriptionDao {
 	
 	public List<Subscription>getSubscriptionsByUser(BasicUser user);
 	
