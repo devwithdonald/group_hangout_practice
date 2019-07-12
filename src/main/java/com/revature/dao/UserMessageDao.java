@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.revature.pojos.UserMessage;
 
-public interface UserMessageServiceDao {
+public interface UserMessageDao {
 	
 	public void saveMessage(UserMessage userMessage, int senderId, int recieverId);
 
