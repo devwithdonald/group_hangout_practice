@@ -9,8 +9,10 @@ public interface FriendsDao {
 	
 	public List<Friends> getAllFriendsByUser(User user);
 	
+	public User getFriendByFriendId(User user, int friendId);
+	
 	public boolean addFriend(User user);
 	
-	public boolean deleteFriend(User user);
+	public boolean removeFriend(User user);
 
 }
