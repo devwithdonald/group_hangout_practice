@@ -6,6 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+
 @Entity
 @Table(name="BASIC_USER")
 public class BasicUser extends User{
@@ -16,13 +17,16 @@ public class BasicUser extends User{
 	@Column(name="LAST_NAME")
 	private String lastName;
 	
-	
+	//TODO
 	private List<Friends> friendList;
+	
+	//TODO
 	private List<Subscriptions> subscriptionList;
 	
 	public BasicUser() {
 		super();
 	}
+	
 	public BasicUser(int id, String username, String password) {
 		super(id, username, password);
 	}
