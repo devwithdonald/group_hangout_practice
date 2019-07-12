@@ -10,7 +10,7 @@ public interface RSVPsDao {
 	
 	public void addRSVP(Rsvp rsvp);
 	public Rsvp getRSVPbyUser(BasicUser user);
-	public List<Rsvp> getRSVPsByEvent(Event event);
-	public List<Rsvp> getRSVPsByUser(BasicUser user);
+	public List<Rsvp> getAllRSVPsByEvent(Event event);
+	public List<Rsvp> getRecentRSVPsByUser(BasicUser user);
 	
 }
