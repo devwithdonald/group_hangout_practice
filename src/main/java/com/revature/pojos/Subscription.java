@@ -1,16 +1,21 @@
 package com.revature.pojos;
 
 public class Subscription {
+	
 	private int subscriptionID;
+	
 	private int userID;
+	
 	private int businessID;
+	
 	private String timeStamp;
+	
 	private int rsvpCount;
 	
 	public Subscription() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
+	
 	public Subscription(int userID, int businessID, String timeStamp, int rsvpCount) {
 		super();
 		this.userID = userID;
@@ -18,11 +23,13 @@ public class Subscription {
 		this.timeStamp = timeStamp;
 		this.rsvpCount = rsvpCount;
 	}
+	
 	@Override
 	public String toString() {
 		return "Subscription [subscriptionID=" + subscriptionID + ", userID=" + userID + ", businessID=" + businessID
 				+ ", timeStamp=" + timeStamp + ", rsvpCount=" + rsvpCount + "]";
 	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -34,6 +41,7 @@ public class Subscription {
 		result = prime * result + userID;
 		return result;
 	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -58,33 +66,43 @@ public class Subscription {
 			return false;
 		return true;
 	}
+	
 	public int getSubscriptionID() {
 		return subscriptionID;
 	}
+	
 	public void setSubscriptionID(int subscriptionID) {
 		this.subscriptionID = subscriptionID;
 	}
+	
 	public int getUserID() {
 		return userID;
 	}
+	
 	public void setUserID(int userID) {
 		this.userID = userID;
 	}
+	
 	public int getBusinessID() {
 		return businessID;
 	}
+	
 	public void setBusinessID(int businessID) {
 		this.businessID = businessID;
 	}
+	
 	public String getTimeStamp() {
 		return timeStamp;
 	}
+	
 	public void setTimeStamp(String timeStamp) {
 		this.timeStamp = timeStamp;
 	}
+	
 	public int getRsvpCount() {
 		return rsvpCount;
 	}
+	
 	public void setRsvpCount(int rsvpCount) {
 		this.rsvpCount = rsvpCount;
 	}
