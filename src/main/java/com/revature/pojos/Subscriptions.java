@@ -12,8 +12,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="SUBSCRIPTION")
-public class Subscription {
+@Table(name="SUBSCRIPTIONS")
+public class Subscriptions {
 	
 	@Id
 	@Column(name="SUBSCRIPTION_ID")
@@ -22,45 +22,62 @@ public class Subscription {
 	
 	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	@JoinColumn(name="USER_ID")
-	private int userId;
+	private BasicUser basicUser;
 	
 	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	@JoinColumn(name="BUSINESS_ID")
-	private int businessId;
+	private BusinessUser businessUser;
 	
 	@Column(name="TIME_OF_SUB")
 	private String timeOfSub;
 	
 	@Column(name="RSVP_COUNT")
 	private int rsvpCount;
-	
-	public Subscription(int userId, int businessId, String timeOfSub, int rsvpCount) {
+
+	public BasicUser getBasicUser() {
+		return basicUser;
+	}
+
+	public void setBasicUser(BasicUser basicUser) {
+		this.basicUser = basicUser;
+	}
+
+	public BusinessUser getBusinessUser() {
+		return businessUser;
+	}
+
+	public void setBusinessUser(BusinessUser businessUser) {
+		this.businessUser = businessUser;
+	}
+
+	public Subscriptions(BasicUser basicUser, BusinessUser businessUser, String timeOfSub,
+			int rsvpCount) {
 		super();
-		this.userId = userId;
-		this.businessId = businessId;
+		this.basicUser = basicUser;
+		this.businessUser = businessUser;
 		this.timeOfSub = timeOfSub;
 		this.rsvpCount = rsvpCount;
 	}
 
-	public Subscription() {
+	public Subscriptions() {
 		super();
 	}
 	
 	@Override
 	public String toString() {
-		return "Subscription [subscriptionId=" + subscriptionId + ", userId=" + userId + ", businessId=" + businessId
-				+ ", timeOfSub=" + timeOfSub + ", rsvpCount=" + rsvpCount + "]";
+		return "Subscriptions [subscriptionId=" + subscriptionId + ", basicUser=" + basicUser + ", businessUser="
+				+ businessUser + ", timeOfSub=" + timeOfSub + ", rsvpCount=" + rsvpCount + "]";
 	}
 	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + businessId;
+		result = prime * result + ((basicUser == null) ? 0 : basicUser.hashCode());
+		result = prime * result + ((businessUser == null) ? 0 : businessUser.hashCode());
 		result = prime * result + rsvpCount;
 		result = prime * result + subscriptionId;
 		result = prime * result + ((timeOfSub == null) ? 0 : timeOfSub.hashCode());
-		result = prime * result + userId;
 		return result;
 	}
 	
@@ -72,8 +89,16 @@ public class Subscription {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Subscription other = (Subscription) obj;
-		if (businessId != other.businessId)
+		Subscriptions other = (Subscriptions) obj;
+		if (basicUser == null) {
+			if (other.basicUser != null)
+				return false;
+		} else if (!basicUser.equals(other.basicUser))
+			return false;
+		if (businessUser == null) {
+			if (other.businessUser != null)
+				return false;
+		} else if (!businessUser.equals(other.businessUser))
 			return false;
 		if (rsvpCount != other.rsvpCount)
 			return false;
@@ -84,8 +109,6 @@ public class Subscription {
 				return false;
 		} else if (!timeOfSub.equals(other.timeOfSub))
 			return false;
-		if (userId != other.userId)
-			return false;
 		return true;
 	}
 	
@@ -95,22 +118,6 @@ public class Subscription {
 	
 	public void setSubscriptionId(int subscriptionID) {
 		this.subscriptionId = subscriptionID;
-	}
-	
-	public int getUserId() {
-		return userId;
-	}
-	
-	public void setUserId(int userID) {
-		this.userId = userID;
-	}
-	
-	public int getBusinessId() {
-		return businessId;
-	}
-	
-	public void setBusinessId(int businessID) {
-		this.businessId = businessID;
 	}
 	
 	public String getTimeOfSub() {
