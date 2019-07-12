@@ -7,12 +7,12 @@ import com.revature.pojos.BusinessMessage;
 
 public interface BusinessEmployeeUserDao {
 
-	public void addBusinessEmployee(int Business, BusinessEmployeeUser user) throws SQLException;
+	public void addBusinessEmployee(int businessId, BusinessEmployeeUser user);
 	
-	public BusinessEmployeeUser getEmployeeByID(int Id) throws SQLException;
+	public BusinessEmployeeUser getEmployeeByID(int businessEmployeeId);
 	
-	public BusinessEmployeeUser getEmployeeByUsername(String username) throws SQLException;
+	public BusinessEmployeeUser getEmployeeByUsername(String username);
 	
-	public BusinessMessage getActiveMessage() throws SQLException;
+	public BusinessMessage getActiveMessage();
 	
 }
