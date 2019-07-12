@@ -6,7 +6,7 @@ import com.revature.pojos.BasicUser;
 import com.revature.pojos.Event;
 import com.revature.pojos.Rsvp;
 
-public interface RSVPsDao {
+public interface RsvpDao {
 	
 	public void addRSVP(Rsvp rsvp);
 	
