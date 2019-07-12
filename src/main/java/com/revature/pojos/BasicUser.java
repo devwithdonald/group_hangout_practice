@@ -2,11 +2,23 @@ package com.revature.pojos;
 
 import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="BASIC_USER")
 public class BasicUser extends User{
+	
+	@Column(name="FIRST_NAME")
 	private String firstName;
+	
+	@Column(name="LAST_NAME")
 	private String lastName;
+	
+	
 	private List<Friends> friendList;
-	private List<Subscription> subscriptionList;
+	private List<Subscriptions> subscriptionList;
 	
 	public BasicUser() {
 		super();
@@ -16,7 +28,7 @@ public class BasicUser extends User{
 	}
 	
 	public BasicUser(String firstName, String lastName, List<Friends> friendList,
-			List<Subscription> subscriptionList) {
+			List<Subscriptions> subscriptionList) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -48,11 +60,11 @@ public class BasicUser extends User{
 		this.friendList = friendList;
 	}
 	
-	public List<Subscription> getSubscriptionList() {
+	public List<Subscriptions> getSubscriptionList() {
 		return subscriptionList;
 	}
 	
-	public void setSubscriptionList(List<Subscription> subscriptionList) {
+	public void setSubscriptionList(List<Subscriptions> subscriptionList) {
 		this.subscriptionList = subscriptionList;
 	}
 	

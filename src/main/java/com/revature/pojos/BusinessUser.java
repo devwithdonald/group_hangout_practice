@@ -8,7 +8,7 @@ public class BusinessUser extends User {
 	
 	private String location;
 	
-	private List<Subscription> subscriberList;
+	private List<Subscriptions> subscriberList;
 	
 	public BusinessUser() {
 		super();
@@ -18,7 +18,7 @@ public class BusinessUser extends User {
 		super(id, username, password);
 	}
 	
-	public BusinessUser(String businessName, String location, List<Subscription> subscriberList) {
+	public BusinessUser(String businessName, String location, List<Subscriptions> subscriberList) {
 		super();
 		this.businessName = businessName;
 		this.location = location;
@@ -41,11 +41,11 @@ public class BusinessUser extends User {
 		this.location = location;
 	}
 	
-	public List<Subscription> getSubscriberList() {
+	public List<Subscriptions> getSubscriberList() {
 		return subscriberList;
 	}
 	
-	public void setSubscriberList(List<Subscription> subscriberList) {
+	public void setSubscriberList(List<Subscriptions> subscriberList) {
 		this.subscriberList = subscriberList;
 	}
 	
