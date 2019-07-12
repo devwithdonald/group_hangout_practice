@@ -63,10 +63,28 @@ public class Subscriptions {
 		super();
 	}
 	
-	@Override
-	public String toString() {
-		return "Subscriptions [subscriptionId=" + subscriptionId + ", basicUser=" + basicUser + ", businessUser="
-				+ businessUser + ", timeOfSub=" + timeOfSub + ", rsvpCount=" + rsvpCount + "]";
+	public int getSubscriptionId() {
+		return subscriptionId;
+	}
+	
+	public void setSubscriptionId(int subscriptionID) {
+		this.subscriptionId = subscriptionID;
+	}
+	
+	public String getTimeOfSub() {
+		return timeOfSub;
+	}
+	
+	public void setTimeOfSub(String timeStamp) {
+		this.timeOfSub = timeStamp;
+	}
+	
+	public int getRsvpCount() {
+		return rsvpCount;
+	}
+	
+	public void setRsvpCount(int rsvpCount) {
+		this.rsvpCount = rsvpCount;
 	}
 	
 	@Override
@@ -111,29 +129,10 @@ public class Subscriptions {
 			return false;
 		return true;
 	}
-	
-	public int getSubscriptionId() {
-		return subscriptionId;
-	}
-	
-	public void setSubscriptionId(int subscriptionID) {
-		this.subscriptionId = subscriptionID;
-	}
-	
-	public String getTimeOfSub() {
-		return timeOfSub;
-	}
-	
-	public void setTimeOfSub(String timeStamp) {
-		this.timeOfSub = timeStamp;
-	}
-	
-	public int getRsvpCount() {
-		return rsvpCount;
-	}
-	
-	public void setRsvpCount(int rsvpCount) {
-		this.rsvpCount = rsvpCount;
-	}
 
+	@Override
+	public String toString() {
+		return "Subscriptions [subscriptionId=" + subscriptionId + ", basicUser=" + basicUser + ", businessUser="
+				+ businessUser + ", timeOfSub=" + timeOfSub + ", rsvpCount=" + rsvpCount + "]";
+	}
 }
