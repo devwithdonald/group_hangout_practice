@@ -12,20 +12,20 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Events")
+@Table(name="EVENTS")
 public class Event {
 	
 	@Id
-	@Column(name="event_id")
+	@Column(name="EVENT_ID")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer eventId;
 	
 	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
-	@JoinColumn(name="user_id")
+	@JoinColumn(name="USER_ID")
 	private BasicUser basicUser;
 	
 	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
-	@JoinColumn(name="business_id")
+	@JoinColumn(name="BUSINESS_ID")
 	private BusinessUser businessUser;
 	
 	//@Column(name="")
@@ -34,25 +34,25 @@ public class Event {
 //	@Column(name="")
 //	private String eventType;
 	
-	@Column(name="title")
+	@Column(name="TITLE")
 	private String title;
 	
-	@Column(name="location")
+	@Column(name="LOCATION")
 	private String location;
 	
-	@Column(name="time_of_event")
+	@Column(name="TIME_OF_EVENT")
 	private String timeOfEvent;
 	
-	@Column(name="date_of_event")
+	@Column(name="DATE_OF_EVENT")
 	private String dateOfEvent;
 	
-	@Column(name="time_posted")
+	@Column(name="TIME_POSTED")
 	private String timePosted;
 	
-	@Column(name="description")
+	@Column(name="DESCRIPTION")
 	private String description;
 	
-	@Column(name="on_timeline")
+	@Column(name="ON_TIMELINE")
 	private Boolean onTimeLine;
 
 	public Event() {
