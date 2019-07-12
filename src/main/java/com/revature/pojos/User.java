@@ -3,12 +3,13 @@ package com.revature.pojos;
 public abstract class User {
 	
 	private int id;
+	
 	private String username;
+	
 	private String password;
 	
 	public User() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public User(int id, String username, String password) {

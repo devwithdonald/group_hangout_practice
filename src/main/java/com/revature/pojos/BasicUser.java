@@ -10,11 +10,9 @@ public class BasicUser extends User{
 	
 	public BasicUser() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	public BasicUser(int id, String username, String password) {
 		super(id, username, password);
-		// TODO Auto-generated constructor stub
 	}
 	
 	public BasicUser(String firstName, String lastName, List<Friends> friendList,
@@ -25,30 +23,39 @@ public class BasicUser extends User{
 		this.friendList = friendList;
 		this.subscriptionList = subscriptionList;
 	}
+	
 	public String getFirstName() {
 		return firstName;
 	}
+	
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
+	
 	public String getLastName() {
 		return lastName;
 	}
+	
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+	
 	public List<Friends> getFriendList() {
 		return friendList;
 	}
+	
 	public void setFriendList(List<Friends> friendList) {
 		this.friendList = friendList;
 	}
+	
 	public List<Subscription> getSubscriptionList() {
 		return subscriptionList;
 	}
+	
 	public void setSubscriptionList(List<Subscription> subscriptionList) {
 		this.subscriptionList = subscriptionList;
 	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -57,6 +64,7 @@ public class BasicUser extends User{
 		result = prime * result + ((lastName == null) ? 0 : lastName.hashCode());
 		return result;
 	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -83,8 +91,5 @@ public class BasicUser extends User{
 	public String toString() {
 		return "BasicUser [firstName=" + firstName + ", lastName=" + lastName + "]";
 	}
-	
-	
-	
 	
 }
