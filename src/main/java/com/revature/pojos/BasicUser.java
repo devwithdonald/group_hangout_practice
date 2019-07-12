@@ -2,9 +2,21 @@ package com.revature.pojos;
 
 import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="BASIC_USER")
 public class BasicUser extends User{
+	
+	@Column(name="FIRST_NAME")
 	private String firstName;
+	
+	@Column(name="LAST_NAME")
 	private String lastName;
+	
+	
 	private List<Friends> friendList;
 	private List<Subscription> subscriptionList;
 	
