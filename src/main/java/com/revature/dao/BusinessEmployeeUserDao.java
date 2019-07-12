@@ -1,7 +1,5 @@
 package com.revature.dao;
 
-import java.sql.SQLException;
-
 import com.revature.pojos.BusinessEmployeeUser;
 import com.revature.pojos.BusinessMessage;
 
