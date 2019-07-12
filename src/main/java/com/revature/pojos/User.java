@@ -1,25 +1,14 @@
 package com.revature.pojos;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.MappedSuperclass;
 
-@Entity
-@Table(name="USER")
+@MappedSuperclass
 public abstract class User {
 	
 	@Id
-	@Column(name="USER_ID")
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int userId;
-	
-	@Column(name="USERNAME")
 	private String username;
-	
-	@Column(name="PASSWORD")
 	private String password;
 	
 	public User() {
