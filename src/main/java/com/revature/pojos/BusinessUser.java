@@ -1,6 +1,5 @@
 package com.revature.pojos;
 
-import java.util.List;
 import java.util.Set;
 
 import javax.persistence.*;
