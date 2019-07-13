@@ -12,11 +12,10 @@ public class SessionFactoryUtil {
 	static {
 		Configuration configuration = new Configuration().configure();
 		//TODO need to update the environment through jenkins
-		configuration.setProperty("hibernate.connection.username", System.getenv(""));
-		configuration.setProperty("hibernate.connection.password", System.getenv(""));
-		// need to update the ending 
+		configuration.setProperty("hibernate.connection.username", System.getenv("HANGOUT_USERNAME"));
+		configuration.setProperty("hibernate.connection.password", System.getenv("HANGOUT_PASSWORD")); 
 		configuration.setProperty("hibernate.connection.url", 
-				"jdbc:postgresql://" + System.getenv("") + ":5432/nick_1905java?");
+				"jdbc:postgresql://" + System.getenv("HANGOUT_URL") + ":5432/glory_1905java?");
 		
 		ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
 				.applySettings(configuration.getProperties()).build();
