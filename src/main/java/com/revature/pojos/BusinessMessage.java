@@ -1,88 +1,60 @@
 package com.revature.pojos;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="BUSINESS_MESSAGES")
 public class BusinessMessage extends Message {
 	
-	private String businessSenderName;
+	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
+	@JoinColumn(name="BUSINESS_ID")
+	private BusinessUser businessUser;
 	
-	private String eventName;
-	
-	private Integer eventId;
+	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
+	@JoinColumn(name="EVENT_ID")
+	private Event event;
 
 	public BusinessMessage() {
 		super();
+		// TODO Auto-generated constructor stub
 	}
-	
+
 	public BusinessMessage(Integer messageId, String message, String timeOfMessage) {
 		super(messageId, message, timeOfMessage);
+		// TODO Auto-generated constructor stub
 	}
 
-	public String getBusinessSenderName() {
-		return businessSenderName;
+	public BusinessMessage(BusinessUser businessUser, Event event) {
+		super();
+		this.businessUser = businessUser;
+		this.event = event;
 	}
 
-	public void setBusinessSenderName(String businessSenderName) {
-		this.businessSenderName = businessSenderName;
+	public BusinessUser getBusinessUser() {
+		return businessUser;
 	}
 
-	public String getEventName() {
-		return eventName;
+	public void setBusinessUser(BusinessUser businessUser) {
+		this.businessUser = businessUser;
 	}
 
-	public void setEventName(String eventName) {
-		this.eventName = eventName;
+	public Event getEvent() {
+		return event;
 	}
 
-	public Integer getEventId() {
-		return eventId;
-	}
-
-	public void setEventId(Integer eventId) {
-		this.eventId = eventId;
-	}
-
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = super.hashCode();
-		result = prime * result + ((businessSenderName == null) ? 0 : businessSenderName.hashCode());
-		result = prime * result + ((eventId == null) ? 0 : eventId.hashCode());
-		result = prime * result + ((eventName == null) ? 0 : eventName.hashCode());
-		return result;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (!super.equals(obj))
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		BusinessMessage other = (BusinessMessage) obj;
-		if (businessSenderName == null) {
-			if (other.businessSenderName != null)
-				return false;
-		} else if (!businessSenderName.equals(other.businessSenderName))
-			return false;
-		if (eventId == null) {
-			if (other.eventId != null)
-				return false;
-		} else if (!eventId.equals(other.eventId))
-			return false;
-		if (eventName == null) {
-			if (other.eventName != null)
-				return false;
-		} else if (!eventName.equals(other.eventName))
-			return false;
-		return true;
+	public void setEvent(Event event) {
+		this.event = event;
 	}
 
 	@Override
 	public String toString() {
-		return "BusinessMessage [businessSenderName=" + businessSenderName + ", eventName=" + eventName + ", eventId="
-				+ eventId + "]";
+		return "BusinessMessage [businessUser=" + businessUser + ", event=" + event + "]";
 	}
-	
 	
 
 }
