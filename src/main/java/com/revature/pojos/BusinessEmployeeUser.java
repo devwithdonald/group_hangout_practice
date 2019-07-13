@@ -9,7 +9,9 @@ public class BusinessEmployeeUser extends User{
 	@Column(name="EMPLOYEE_NAME")
 	private String employerName;
 	
-	private String businessMessage;
+	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
+	@JoinColumn(name="business_message_id")
+	private BusinessMessage businessMessage;
 	
 	public BusinessEmployeeUser() {
 		super();
@@ -19,7 +21,7 @@ public class BusinessEmployeeUser extends User{
 		super(id, username, password);
 	}
 	
-	public BusinessEmployeeUser(String employerName, String businessMessage) {
+	public BusinessEmployeeUser(String employerName, BusinessMessage businessMessage) {
 		super();
 		this.employerName = employerName;
 		this.businessMessage = businessMessage;
@@ -33,11 +35,11 @@ public class BusinessEmployeeUser extends User{
 		this.employerName = employerName;
 	}
 	
-	public String getBusinessMessage() {
+	public BusinessMessage getBusinessMessage() {
 		return businessMessage;
 	}
 	
-	public void setBusinessMessage(String businessMessage) {
+	public void setBusinessMessage(BusinessMessage businessMessage) {
 		this.businessMessage = businessMessage;
 	}
 	
