@@ -1,59 +1,62 @@
 package com.revature.pojos;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="EVENT_MESSAGES")
 public class EventMessage extends Message {
 	
-	private Integer eventId;
+	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
+	@JoinColumn(name="EVENT_ID")
+	private Event event;
 	
-	private String senderName;
-	
-	private String eventName;
+	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
+	@JoinColumn(name="SENDER_ID")
+	private BasicUser basicUser;
 
 	public EventMessage() {
 		super();
+		// TODO Auto-generated constructor stub
 	}
 
 	public EventMessage(Integer messageId, String message, String timeOfMessage) {
 		super(messageId, message, timeOfMessage);
+		// TODO Auto-generated constructor stub
 	}
 
-	public EventMessage(String senderName, Integer eventId, String eventName) {
+	public EventMessage(Event event, BasicUser basicUser) {
 		super();
-		this.eventId = eventId;
-		this.senderName = senderName;
-		this.eventName = eventName;
+		this.event = event;
+		this.basicUser = basicUser;
 	}
 
-	public Integer getEventId() {
-		return eventId;
+	public Event getEvent() {
+		return event;
 	}
 
-	public void setEventId(Integer eventId) {
-		this.eventId = eventId;
+	public void setEvent(Event event) {
+		this.event = event;
 	}
 
-	public String getSenderName() {
-		return senderName;
+	public BasicUser getBasicUser() {
+		return basicUser;
 	}
 
-	public void setSenderName(String senderName) {
-		this.senderName = senderName;
-	}
-
-	public String getEventName() {
-		return eventName;
-	}
-
-	public void setEventName(String eventName) {
-		this.eventName = eventName;
+	public void setBasicUser(BasicUser basicUser) {
+		this.basicUser = basicUser;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = super.hashCode();
-		result = prime * result + ((eventId == null) ? 0 : eventId.hashCode());
-		result = prime * result + ((eventName == null) ? 0 : eventName.hashCode());
-		result = prime * result + ((senderName == null) ? 0 : senderName.hashCode());
+		result = prime * result + ((basicUser == null) ? 0 : basicUser.hashCode());
+		result = prime * result + ((event == null) ? 0 : event.hashCode());
 		return result;
 	}
 
@@ -66,27 +69,24 @@ public class EventMessage extends Message {
 		if (getClass() != obj.getClass())
 			return false;
 		EventMessage other = (EventMessage) obj;
-		if (eventId == null) {
-			if (other.eventId != null)
+		if (basicUser == null) {
+			if (other.basicUser != null)
 				return false;
-		} else if (!eventId.equals(other.eventId))
+		} else if (!basicUser.equals(other.basicUser))
 			return false;
-		if (eventName == null) {
-			if (other.eventName != null)
+		if (event == null) {
+			if (other.event != null)
 				return false;
-		} else if (!eventName.equals(other.eventName))
-			return false;
-		if (senderName == null) {
-			if (other.senderName != null)
-				return false;
-		} else if (!senderName.equals(other.senderName))
+		} else if (!event.equals(other.event))
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "EventMessage [eventId=" + eventId + ", senderName=" + senderName + ", eventName=" + eventName + "]";
+		return "EventMessage [event=" + event + ", basicUser=" + basicUser + "]";
 	}
+	
+
 	
 }
