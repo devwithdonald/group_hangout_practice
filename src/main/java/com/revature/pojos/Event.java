@@ -21,7 +21,7 @@ public class Event {
 	private Integer eventId;
 	
 	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
-	@JoinColumn(name="USER_ID")
+	@JoinColumn(name="BASIC_USER_ID")
 	private BasicUser basicUser;
 	
 	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
