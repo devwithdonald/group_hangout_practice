@@ -1,25 +1,42 @@
 package com.revature.pojos;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="RSVPS")
 public class Rsvp {
 	
+	@Id
+	@Column(name="RSVP_ID")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer rsvpId;
 	
-	private Integer eventId;
+	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
+	@JoinColumn(name="EVENT_ID")
+	private Event event;
 	
-	private String username;
-	
-	private String eventTitle;
+	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
+	@JoinColumn(name="BASIC_USER_ID")
+	private BasicUser basicUser;
 
 	public Rsvp() {
 		super();
 	}
 
-	public Rsvp(Integer rsvpId, Integer eventId, String username, String eventTitle) {
+	public Rsvp(Integer rsvpId, Event event, BasicUser basicUser) {
 		super();
 		this.rsvpId = rsvpId;
-		this.eventId = eventId;
-		this.username = username;
-		this.eventTitle = eventTitle;
+		this.event = event;
+		this.basicUser = basicUser;
 	}
 
 	public Integer getRsvpId() {
@@ -30,38 +47,29 @@ public class Rsvp {
 		this.rsvpId = rsvpId;
 	}
 
-	public Integer getEventId() {
-		return eventId;
+	public Event getEvent() {
+		return event;
 	}
 
-	public void setEventId(Integer eventId) {
-		this.eventId = eventId;
+	public void setEvent(Event event) {
+		this.event = event;
 	}
 
-	public String getUsername() {
-		return username;
+	public BasicUser getBasicUser() {
+		return basicUser;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	public String getEventTitle() {
-		return eventTitle;
-	}
-
-	public void setEventTitle(String eventTitle) {
-		this.eventTitle = eventTitle;
+	public void setBasicUser(BasicUser basicUser) {
+		this.basicUser = basicUser;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((eventId == null) ? 0 : eventId.hashCode());
-		result = prime * result + ((eventTitle == null) ? 0 : eventTitle.hashCode());
+		result = prime * result + ((basicUser == null) ? 0 : basicUser.hashCode());
+		result = prime * result + ((event == null) ? 0 : event.hashCode());
 		result = prime * result + ((rsvpId == null) ? 0 : rsvpId.hashCode());
-		result = prime * result + ((username == null) ? 0 : username.hashCode());
 		return result;
 	}
 
@@ -74,33 +82,27 @@ public class Rsvp {
 		if (getClass() != obj.getClass())
 			return false;
 		Rsvp other = (Rsvp) obj;
-		if (eventId == null) {
-			if (other.eventId != null)
+		if (basicUser == null) {
+			if (other.basicUser != null)
 				return false;
-		} else if (!eventId.equals(other.eventId))
+		} else if (!basicUser.equals(other.basicUser))
 			return false;
-		if (eventTitle == null) {
-			if (other.eventTitle != null)
+		if (event == null) {
+			if (other.event != null)
 				return false;
-		} else if (!eventTitle.equals(other.eventTitle))
+		} else if (!event.equals(other.event))
 			return false;
 		if (rsvpId == null) {
 			if (other.rsvpId != null)
 				return false;
 		} else if (!rsvpId.equals(other.rsvpId))
 			return false;
-		if (username == null) {
-			if (other.username != null)
-				return false;
-		} else if (!username.equals(other.username))
-			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "Rsvp [rsvpId=" + rsvpId + ", eventId=" + eventId + ", username=" + username + ", eventTitle="
-				+ eventTitle + "]";
+		return "Rsvp [rsvpId=" + rsvpId + ", event=" + event + ", basicUser=" + basicUser + "]";
 	}
 	
 }
