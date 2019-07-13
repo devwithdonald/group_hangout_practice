@@ -1,11 +1,14 @@
 package com.revature.pojos;
 
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
+
+@MappedSuperclass
 public abstract class Message {
 	
+	@Id
 	private Integer messageId;
-	
 	private String message;
-	
 	private String timeOfMessage;
 
 	public Message() {
