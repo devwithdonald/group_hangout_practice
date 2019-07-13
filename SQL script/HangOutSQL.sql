@@ -37,14 +37,8 @@ create table rsvps(
 	event_id integer references event (event_id)
 );
 
-create table rsvps(
-	rsvp_id serial primary key,
-	basic_user_id integer references basic_user (basic_user_id),
-	event_id integer references event (event_id)
-);
-
-create table business_employees(
-	business_employee_id serial primary key,
+create table business_employee_user(
+	business_employee_user_id serial primary key,
 	business_id integer references business_user (business_id),
 	business_message_id integer references business_messages (business_message_id),
 	username varchar unique not null,
