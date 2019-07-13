@@ -1,43 +1,57 @@
 package com.revature.pojos;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="FRIENDS")
 public class Friends {
 	
-	private String username;
+	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
+	@JoinColumn(name="USER_ID")
+	private BasicUser basicUser;
 	
-	private String friendName;
+	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
+	@JoinColumn(name="FRIEND_ID")
+	private BasicUser basicFriendUser;
 
 	public Friends() {
 		super();
+		// TODO Auto-generated constructor stub
 	}
 
-	public Friends(String username, String friendName) {
+	public Friends(BasicUser basicUser, BasicUser basicFriendUser) {
 		super();
-		this.username = username;
-		this.friendName = friendName;
+		this.basicUser = basicUser;
+		this.basicFriendUser = basicFriendUser;
 	}
 
-	public String getUsername() {
-		return username;
+	public BasicUser getBasicUser() {
+		return basicUser;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setBasicUser(BasicUser basicUser) {
+		this.basicUser = basicUser;
 	}
 
-	public String getFriendName() {
-		return friendName;
+	public BasicUser getBasicFriendUser() {
+		return basicFriendUser;
 	}
 
-	public void setFriendName(String friendName) {
-		this.friendName = friendName;
+	public void setBasicFriendUser(BasicUser basicFriendUser) {
+		this.basicFriendUser = basicFriendUser;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((friendName == null) ? 0 : friendName.hashCode());
-		result = prime * result + ((username == null) ? 0 : username.hashCode());
+		result = prime * result + ((basicFriendUser == null) ? 0 : basicFriendUser.hashCode());
+		result = prime * result + ((basicUser == null) ? 0 : basicUser.hashCode());
 		return result;
 	}
 
@@ -50,22 +64,24 @@ public class Friends {
 		if (getClass() != obj.getClass())
 			return false;
 		Friends other = (Friends) obj;
-		if (friendName == null) {
-			if (other.friendName != null)
+		if (basicFriendUser == null) {
+			if (other.basicFriendUser != null)
 				return false;
-		} else if (!friendName.equals(other.friendName))
+		} else if (!basicFriendUser.equals(other.basicFriendUser))
 			return false;
-		if (username == null) {
-			if (other.username != null)
+		if (basicUser == null) {
+			if (other.basicUser != null)
 				return false;
-		} else if (!username.equals(other.username))
+		} else if (!basicUser.equals(other.basicUser))
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "Friends [username=" + username + ", friendName=" + friendName + "]";
+		return "Friends [basicUser=" + basicUser + ", basicFriendUser=" + basicFriendUser + "]";
 	}
+
+
 	
 }
