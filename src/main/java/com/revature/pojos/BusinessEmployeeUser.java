@@ -1,7 +1,12 @@
 package com.revature.pojos;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="BUSINESS_EMPLOYEE")
 public class BusinessEmployeeUser extends User{
 
+	@Column(name="EMPLOYEE_NAME")
 	private String employerName;
 	
 	private String businessMessage;
