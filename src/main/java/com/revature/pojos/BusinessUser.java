@@ -2,10 +2,16 @@ package com.revature.pojos;
 
 import java.util.List;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="BUSINESSES")
 public class BusinessUser extends User {
 
+	@Column(name="BUSINESS_NAME")
 	private String businessName;
 	
+	@Column(name="BUSINESS_LOCATION")
 	private String location;
 	
 	private List<Subscriptions> subscriberList;
