@@ -1,6 +1,7 @@
 package com.revature.pojos;
 
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.*;
 
@@ -14,7 +15,8 @@ public class BusinessUser extends User {
 	@Column(name="BUSINESS_LOCATION")
 	private String location;
 	
-	private List<Subscriptions> subscriberList;
+	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.MERGE, mappedBy="businessUser")
+	private Set<Subscriptions> subscriberList;
 	
 	public BusinessUser() {
 		super();
@@ -24,7 +26,7 @@ public class BusinessUser extends User {
 		super(id, username, password);
 	}
 	
-	public BusinessUser(String businessName, String location, List<Subscriptions> subscriberList) {
+	public BusinessUser(String businessName, String location, Set<Subscriptions> subscriberList) {
 		super();
 		this.businessName = businessName;
 		this.location = location;
@@ -47,11 +49,11 @@ public class BusinessUser extends User {
 		this.location = location;
 	}
 	
-	public List<Subscriptions> getSubscriberList() {
+	public Set<Subscriptions> getSubscriberList() {
 		return subscriberList;
 	}
 	
-	public void setSubscriberList(List<Subscriptions> subscriberList) {
+	public void setSubscriberList(Set<Subscriptions> subscriberList) {
 		this.subscriberList = subscriberList;
 	}
 	
