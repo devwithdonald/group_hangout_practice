@@ -1,9 +1,16 @@
 package com.revature.pojos;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 
@@ -17,11 +24,15 @@ public class BasicUser extends User{
 	@Column(name="LAST_NAME")
 	private String lastName;
 	
-	//TODO
-	private List<Friends> friendList;
+	//TODO this may be wrong
+	@ManyToMany(fetch=FetchType.LAZY)
+	@JoinTable(name="FRIENDS",
+			joinColumns=@JoinColumn(name="BASIC_USER_ID"),
+			inverseJoinColumns=@JoinColumn(name="BASIC_USER_ID"))
+	private Set<Friends> friendList;
 	
-	//TODO
-	private List<Subscriptions> subscriptionList;
+	@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="basicUser")
+	private Set<Subscriptions> subscriptions = new HashSet<Subscriptions>();
 	
 	public BasicUser() {
 		super();
@@ -31,13 +42,13 @@ public class BasicUser extends User{
 		super(id, username, password);
 	}
 	
-	public BasicUser(String firstName, String lastName, List<Friends> friendList,
-			List<Subscriptions> subscriptionList) {
+	public BasicUser(String firstName, String lastName, Set<Friends> friendList,
+			Set<Subscriptions> subscriptions) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.friendList = friendList;
-		this.subscriptionList = subscriptionList;
+		this.subscriptions = subscriptions;
 	}
 	
 	public String getFirstName() {
@@ -56,20 +67,20 @@ public class BasicUser extends User{
 		this.lastName = lastName;
 	}
 	
-	public List<Friends> getFriendList() {
+	public Set<Friends> getFriendList() {
 		return friendList;
 	}
 	
-	public void setFriendList(List<Friends> friendList) {
+	public void setFriendList(Set<Friends> friendList) {
 		this.friendList = friendList;
 	}
 	
-	public List<Subscriptions> getSubscriptionList() {
-		return subscriptionList;
+	public Set<Subscriptions> getSubscriptions() {
+		return subscriptions;
 	}
 	
-	public void setSubscriptionList(List<Subscriptions> subscriptionList) {
-		this.subscriptionList = subscriptionList;
+	public void setSubscriptions(Set<Subscriptions> subscriptions) {
+		this.subscriptions = subscriptions;
 	}
 	
 	@Override
