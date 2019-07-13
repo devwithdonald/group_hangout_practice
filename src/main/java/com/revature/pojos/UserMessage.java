@@ -1,78 +1,91 @@
 package com.revature.pojos;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "USER_MESSAGES")
 public class UserMessage extends Message {
-	
-	private String senderName;
-	
-	private String receiverName;
+                                                                                
+    @ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
+    @JoinColumn(name="SENDER_ID")
+    private BasicUser sender;
+                                                                                
+    @ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
+    @JoinColumn(name="RECEIVER_ID")
+    private BasicUser receiver;
 
-	public UserMessage() {
-		super();
-	}
+    public UserMessage() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
 
-	public UserMessage(Integer messageId, String message, String timeOfMessage) {
-		super(messageId, message, timeOfMessage);
-	}
+    public UserMessage(Integer messageId, String message, String timeOfMessage) {
+        super(messageId, message, timeOfMessage);
+        // TODO Auto-generated constructor stub
+    }
 
-	public UserMessage(String senderName, String receiverName) {
-		super();
-		this.senderName = senderName;
-		this.receiverName = receiverName;
-	}
+    public UserMessage(BasicUser sender, BasicUser receiver) {
+        super();
+        this.sender = sender;
+        this.receiver = receiver;
+    }
 
-	public String getSenderName() {
-		return senderName;
-	}
+    public BasicUser getSender() {
+        return sender;
+    }
 
-	public void setSenderName(String senderName) {
-		this.senderName = senderName;
-	}
+    public void setSender(BasicUser sender) {
+        this.sender = sender;
+    }
 
-	public String getReceiverName() {
-		return receiverName;
-	}
+    public BasicUser getReceiver() {
+        return receiver;
+    }
 
-	public void setReceiverName(String receiverName) {
-		this.receiverName = receiverName;
-	}
+    public void setReceiver(BasicUser receiver) {
+        this.receiver = receiver;
+    }
 
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = super.hashCode();
-		result = prime * result + ((receiverName == null) ? 0 : receiverName.hashCode());
-		result = prime * result + ((senderName == null) ? 0 : senderName.hashCode());
-		return result;
-	}
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = super.hashCode();
+        result = prime * result + ((receiver == null) ? 0 : receiver.hashCode());
+        result = prime * result + ((sender == null) ? 0 : sender.hashCode());
+        return result;
+    }
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (!super.equals(obj))
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		UserMessage other = (UserMessage) obj;
-		if (receiverName == null) {
-			if (other.receiverName != null)
-				return false;
-		} else if (!receiverName.equals(other.receiverName))
-			return false;
-		if (senderName == null) {
-			if (other.senderName != null)
-				return false;
-		} else if (!senderName.equals(other.senderName))
-			return false;
-		return true;
-	}
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (!super.equals(obj))
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        UserMessage other = (UserMessage) obj;
+        if (receiver == null) {
+            if (other.receiver != null)
+                return false;
+        } else if (!receiver.equals(other.receiver))
+            return false;
+        if (sender == null) {
+            if (other.sender != null)
+                return false;
+        } else if (!sender.equals(other.sender))
+            return false;
+        return true;
+    }
 
-	@Override
-	public String toString() {
-		return "UserMessage [senderName=" + senderName + ", receiverName=" + receiverName + "]";
-	}
-	
-	
+    @Override
+    public String toString() {
+        return "UserMessage [sender=" + sender + ", receiver=" + receiver + "]";
+    }
 
-	
+                                                                                
+                                                                                
+
+                                                                                
 }
+	
+
