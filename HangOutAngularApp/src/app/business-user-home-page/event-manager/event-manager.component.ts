@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-event-mangager',
-  templateUrl: './event-mangager.component.html',
-  styleUrls: ['./event-mangager.component.css']
+  selector: 'app-event-manager',
+  templateUrl: './event-manager.component.html',
+  styleUrls: ['./event-manager.component.css']
 })
-export class EventMangagerComponent implements OnInit {
+export class EventManagerComponent implements OnInit {
 
   constructor() { }
 
