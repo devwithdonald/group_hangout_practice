@@ -20,10 +20,13 @@ import { BusinessUserVSPEComponent } from './business-user-vspe/business-user-vs
 // tslint:disable-next-line: max-line-length
 import { UpdateBusinessEventComponent } from './update-business-event/update-business-event.component';
 import { DiscountComponent } from './subscribers/discount/discount.component';
+import { BasicUserAccountInfoComponent } from './basic-user-account-info/basic-user-account-info.component';
+import { BasicUserAccountInfoFormComponent } from './basic-user-account-info/basic-user-account-info-form/basic-user-account-info-form.component';
 
 
 const appRoutes: Routes = [
-    { path: '', component: LoginComponent}
+    { path: '', component: LoginComponent},
+    { path: 'BasicUserAccountInfo', component: BasicUserAccountInfoComponent}
   ];
 
 @NgModule({
@@ -38,7 +41,9 @@ const appRoutes: Routes = [
       AddBusinessEventComponent,
       BusinessUserVSPEComponent,
       UpdateBusinessEventComponent,
-      DiscountComponent
+      DiscountComponent,
+      BasicUserAccountInfoComponent,
+      BasicUserAccountInfoFormComponent
     ],
     imports: [
       FormsModule,
