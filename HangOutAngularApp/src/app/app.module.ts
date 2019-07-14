@@ -11,6 +11,7 @@ import { LoginFormComponent } from './login/login-form/login-form.component';
 
 
 import { FormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
 import { BusinessUserHomePageComponent } from './business-user-home-page/business-user-home-page.component';
 import { EventManagerComponent } from './event-manager/event-manager.component';
 import { SubscribersComponent } from './subscribers/subscribers.component';
@@ -22,11 +23,14 @@ import { UpdateBusinessEventComponent } from './update-business-event/update-bus
 import { DiscountComponent } from './subscribers/discount/discount.component';
 import { BasicUserAccountInfoComponent } from './basic-user-account-info/basic-user-account-info.component';
 import { BasicUserAccountInfoFormComponent } from './basic-user-account-info/basic-user-account-info-form/basic-user-account-info-form.component';
+import { RegisterFormComponent } from './register/register-form/register-form.component';
+
 
 
 const appRoutes: Routes = [
     { path: '', component: LoginComponent},
-    { path: 'BasicUserAccountInfo', component: BasicUserAccountInfoComponent}
+    { path: 'BasicUserAccountInfo', component: BasicUserAccountInfoComponent},
+    { path: 'register', component: RegisterComponent}
   ];
 
 @NgModule({
@@ -43,7 +47,9 @@ const appRoutes: Routes = [
       UpdateBusinessEventComponent,
       DiscountComponent,
       BasicUserAccountInfoComponent,
-      BasicUserAccountInfoFormComponent
+      BasicUserAccountInfoFormComponent,
+      RegisterComponent,
+      RegisterFormComponent
     ],
     imports: [
       FormsModule,
