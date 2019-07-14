@@ -26,6 +26,8 @@ import { BasicUserAccountInfoFormComponent } from './basic-user-account-info/bas
 import { RegisterFormComponent } from './register/register-form/register-form.component';
 import { EditBasicUserAccountInfoComponent } from './edit-basic-user-account-info/edit-basic-user-account-info.component';
 import { EditBasicUserAccountInfoFormComponent } from './edit-basic-user-account-info/edit-basic-user-account-info-form/edit-basic-user-account-info-form.component';
+import { BasicUserPrivateEventsComponent } from './basic-user-private-events/basic-user-private-events.component';
+import { BasicUserPrivateEventsTableComponent } from './basic-user-private-events/basic-user-private-events-table/basic-user-private-events-table.component';
 
 
 
@@ -33,7 +35,9 @@ const appRoutes: Routes = [
     { path: '', component: LoginComponent},
     { path: 'BasicUserAccountInfo', component: BasicUserAccountInfoComponent},
     { path: 'register', component: RegisterComponent},
-    { path: 'EditBasicUserAccountInfo', component: EditBasicUserAccountInfoComponent}
+    { path: 'EditBasicUserAccountInfo', component: EditBasicUserAccountInfoComponent},
+    { path: 'BasicUser/PrivateEvents', component: BasicUserPrivateEventsComponent}
+
   ];
 
 @NgModule({
@@ -54,7 +58,9 @@ const appRoutes: Routes = [
       RegisterComponent,
       RegisterFormComponent,
       EditBasicUserAccountInfoComponent,
-      EditBasicUserAccountInfoFormComponent
+      EditBasicUserAccountInfoFormComponent,
+      BasicUserPrivateEventsComponent,
+      BasicUserPrivateEventsTableComponent
     ],
     imports: [
       FormsModule,
