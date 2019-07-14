@@ -20,16 +20,21 @@ import { AddBusinessEventComponent } from './add-business-event/add-business-eve
 import { BusinessUserVSPEComponent } from './business-user-vspe/business-user-vspe.component';
 // tslint:disable-next-line: max-line-length
 import { UpdateBusinessEventComponent } from './update-business-event/update-business-event.component';
-import { DiscountComponent } from './subscribers/discount/discount.component';
+import { DiscountComponent } from './discount/discount.component';
 import { BasicUserAccountInfoComponent } from './basic-user-account-info/basic-user-account-info.component';
+// tslint:disable-next-line: max-line-length
 import { BasicUserAccountInfoFormComponent } from './basic-user-account-info/basic-user-account-info-form/basic-user-account-info-form.component';
 import { RegisterFormComponent } from './register/register-form/register-form.component';
+// tslint:disable-next-line: max-line-length
+import { BusinessUserCurrentEventViewComponent } from './business-user-home-page/business-user-current-event-view/business-user-current-event-view.component';
+// tslint:disable-next-line: max-line-length
+import { BusinessUserLoyalSubscribersViewComponent } from './business-user-home-page/business-user-loyal-subscribers-view/business-user-loyal-subscribers-view.component';
 import { EditBasicUserAccountInfoComponent } from './edit-basic-user-account-info/edit-basic-user-account-info.component';
+// tslint:disable-next-line: max-line-length
 import { EditBasicUserAccountInfoFormComponent } from './edit-basic-user-account-info/edit-basic-user-account-info-form/edit-basic-user-account-info-form.component';
 import { BasicUserPrivateEventsComponent } from './basic-user-private-events/basic-user-private-events.component';
 import { BasicUserPrivateEventsTableComponent } from './basic-user-private-events/basic-user-private-events-table/basic-user-private-events-table.component';
 import { BasicUserPrivateEventsAddEventButtonComponent } from './basic-user-private-events/basic-user-private-events-add-event-button/basic-user-private-events-add-event-button.component';
-
 
 
 const appRoutes: Routes = [
@@ -58,6 +63,8 @@ const appRoutes: Routes = [
       BasicUserAccountInfoFormComponent,
       RegisterComponent,
       RegisterFormComponent,
+      BusinessUserCurrentEventViewComponent,
+      BusinessUserLoyalSubscribersViewComponent,
       EditBasicUserAccountInfoComponent,
       EditBasicUserAccountInfoFormComponent,
       BasicUserPrivateEventsComponent,
