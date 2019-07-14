@@ -20,10 +20,14 @@ import { AddBusinessEventComponent } from './add-business-event/add-business-eve
 import { BusinessUserVSPEComponent } from './business-user-vspe/business-user-vspe.component';
 // tslint:disable-next-line: max-line-length
 import { UpdateBusinessEventComponent } from './update-business-event/update-business-event.component';
-import { DiscountComponent } from './subscribers/discount/discount.component';
+import { DiscountComponent } from './discount/discount.component';
 import { BasicUserAccountInfoComponent } from './basic-user-account-info/basic-user-account-info.component';
+// tslint:disable-next-line: max-line-length
 import { BasicUserAccountInfoFormComponent } from './basic-user-account-info/basic-user-account-info-form/basic-user-account-info-form.component';
 import { RegisterFormComponent } from './register/register-form/register-form.component';
+// tslint:disable-next-line: max-line-length
+import { BusinessUserCurrentEventViewComponent } from './business-user-home-page/business-user-current-event-view/business-user-current-event-view.component';
+import { BusinessUserLoyalSubscribersViewComponent } from './business-user-home-page/business-user-loyal-subscribers-view/business-user-loyal-subscribers-view.component';
 
 
 
@@ -49,7 +53,9 @@ const appRoutes: Routes = [
       BasicUserAccountInfoComponent,
       BasicUserAccountInfoFormComponent,
       RegisterComponent,
-      RegisterFormComponent
+      RegisterFormComponent,
+      BusinessUserCurrentEventViewComponent,
+      BusinessUserLoyalSubscribersViewComponent
     ],
     imports: [
       FormsModule,
