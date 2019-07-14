@@ -12,14 +12,14 @@ import { LoginFormComponent } from './login/login-form/login-form.component';
 
 import { FormsModule } from '@angular/forms';
 import { BusinessUserHomePageComponent } from './business-user-home-page/business-user-home-page.component';
-import { EventManagerComponent } from './business-user-home-page/event-manager/event-manager.component';
-import { SubscribersComponent } from './business-user-home-page/subscribers/subscribers.component';
-import { EmployeeManagerComponent } from './business-user-home-page/employee-manager/employee-manager.component';
-import { AddBusinessEventComponent } from './business-user-home-page/event-manager/add-business-event/add-business-event.component';
-import { BusinessUserVSPEComponent } from './business-user-home-page/event-manager/business-user-vspe/business-user-vspe.component';
+import { EventManagerComponent } from './event-manager/event-manager.component';
+import { SubscribersComponent } from './subscribers/subscribers.component';
+import { EmployeeManagerComponent } from './employee-manager/employee-manager.component';
+import { AddBusinessEventComponent } from './add-business-event/add-business-event.component';
+import { BusinessUserVSPEComponent } from './business-user-vspe/business-user-vspe.component';
 // tslint:disable-next-line: max-line-length
-import { UpdateBusinessEventComponent } from './business-user-home-page/event-manager/update-business-event/update-business-event.component';
-import { DiscountComponent } from './business-user-home-page/subscribers/discount/discount.component';
+import { UpdateBusinessEventComponent } from './update-business-event/update-business-event.component';
+import { DiscountComponent } from './subscribers/discount/discount.component';
 
 
 const appRoutes: Routes = [
