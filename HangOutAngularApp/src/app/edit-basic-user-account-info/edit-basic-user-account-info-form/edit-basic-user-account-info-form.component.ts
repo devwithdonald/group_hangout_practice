@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-edit-basic-user-account-info-form',
@@ -19,7 +20,7 @@ export class EditBasicUserAccountInfoFormComponent implements OnInit {
   // toggle show password
   hidePassword = 'password';
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     // should use a service that replicates a BasicUser object to load these values
@@ -37,6 +38,16 @@ export class EditBasicUserAccountInfoFormComponent implements OnInit {
     } else {
       this.hidePassword = 'password';
     }
+  }
+
+  onBasicUserEditInfo() {
+    // TODO send new information to database
+    console.log('edit account information button clicked');
+    console.log(`username: ${this.username}`);
+    console.log(`password: ${this.password}`);
+    console.log(`firstName: ${this.firstName}`);
+    console.log(`lastName: ${this.lastName}`);
+    this.router.navigate(['/BasicUserAccountInfo']);
   }
 
 }
