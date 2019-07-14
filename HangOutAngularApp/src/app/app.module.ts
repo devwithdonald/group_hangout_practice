@@ -11,6 +11,7 @@ import { LoginFormComponent } from './login/login-form/login-form.component';
 
 
 import { FormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
 import { BusinessUserHomePageComponent } from './business-user-home-page/business-user-home-page.component';
 import { EventManagerComponent } from './event-manager/event-manager.component';
 import { SubscribersComponent } from './subscribers/subscribers.component';
@@ -19,11 +20,13 @@ import { AddBusinessEventComponent } from './add-business-event/add-business-eve
 import { BusinessUserVSPEComponent } from './business-user-vspe/business-user-vspe.component';
 // tslint:disable-next-line: max-line-length
 import { UpdateBusinessEventComponent } from './update-business-event/update-business-event.component';
-import { DiscountComponent } from './subscribers/discount/discount.component';
+import { RegisterFormComponent } from './register/register-form/register-form.component';
+
 
 
 const appRoutes: Routes = [
-    { path: '', component: LoginComponent}
+    { path: '', component: LoginComponent},
+    { path: 'register', component: RegisterComponent}
   ];
 
 @NgModule({
@@ -38,7 +41,8 @@ const appRoutes: Routes = [
       AddBusinessEventComponent,
       BusinessUserVSPEComponent,
       UpdateBusinessEventComponent,
-      DiscountComponent
+      RegisterComponent,
+      RegisterFormComponent
     ],
     imports: [
       FormsModule,
