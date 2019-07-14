@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register-form',
@@ -7,11 +8,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterFormComponent implements OnInit {
 
-  userChoice = 'Basic User'; // defualt value
+  userChoice = 'Select User Type'; // defualt value
+  username: string;
+  password: string;
+  firstName: string;
+  lastName: string;
+  businessName: string;
+  businessLocation: string;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
+
+  onBasicUserRegistration() {
+    console.log('onBasicUserRegistration clicked');
+    console.log(`username: ${this.username}`);
+    console.log(`password: ${this.password}`);
+    console.log(`firstName: ${this.firstName}`);
+    console.log(`lastName: ${this.lastName}`);
+    // TODO need to alert user that registration was successful
+    this.router.navigate(['']);
+  }
+
+  onBusinessUserRegistration() {
+    console.log('onBusinessUserRegistration clicked');
+    console.log(`username: ${this.username}`);
+    console.log(`password: ${this.password}`);
+    console.log(`businessName: ${this.businessName}`);
+    console.log(`businessLocation: ${this.businessLocation}`);
+    // TODO need to alert user that registration was successful
+    this.router.navigate(['']);
+  }
+  
 
 }
