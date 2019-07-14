@@ -28,6 +28,7 @@ export class RegisterFormComponent implements OnInit {
     console.log(`firstName: ${this.firstName}`);
     console.log(`lastName: ${this.lastName}`);
     // TODO need to alert user that registration was successful
+    // TODO if successful registration then redirect
     this.router.navigate(['']);
   }
 
@@ -38,6 +39,7 @@ export class RegisterFormComponent implements OnInit {
     console.log(`businessName: ${this.businessName}`);
     console.log(`businessLocation: ${this.businessLocation}`);
     // TODO need to alert user that registration was successful
+    // TODO if successful registration then redirect
     this.router.navigate(['']);
   }
   
