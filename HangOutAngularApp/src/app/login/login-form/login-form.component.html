@@ -18,15 +18,14 @@
         <div class="row">
 
             <div class="col">
-                <button type="submit" class="btn btn-primary" id="loginButton">Login</button>
+                <button (click)="onLogin()" type="submit" class="btn btn-primary" id="loginButton">Login</button>
             </div>
             <div class="col">
-                <button type="submit" class="btn btn-primary" id="registerButton">Register</button>
+                <button (click)="onRegister()" type="submit" class="btn btn-primary"
+                    id="registerButton">Register</button>
             </div>
 
         </div>
 
-        <p>{{ username }}</p>
-        <p>{{ password }}</p>
     </form>
 </div>
