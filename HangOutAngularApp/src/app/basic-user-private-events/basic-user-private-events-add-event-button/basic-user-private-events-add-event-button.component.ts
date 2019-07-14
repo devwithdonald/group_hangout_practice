@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-basic-user-private-events-add-event-button',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BasicUserPrivateEventsAddEventButtonComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  onAddEvent() {
+    // redirect to add events page for the basic user
+    this.router.navigate(['/BasicUser/AddEvent']);
   }
 
 }
