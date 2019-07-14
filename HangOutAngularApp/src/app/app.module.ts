@@ -39,9 +39,9 @@ import { BasicUserPrivateEventsAddEventButtonComponent } from './basic-user-priv
 
 const appRoutes: Routes = [
     { path: '', component: LoginComponent},
-    { path: 'BasicUserAccountInfo', component: BasicUserAccountInfoComponent},
+    { path: 'BasicUser/ViewAccountInfo', component: BasicUserAccountInfoComponent},
     { path: 'register', component: RegisterComponent},
-    { path: 'EditBasicUserAccountInfo', component: EditBasicUserAccountInfoComponent},
+    { path: 'BasicUser/EditAccountInfo', component: EditBasicUserAccountInfoComponent},
     { path: 'BasicUser/PrivateEvents', component: BasicUserPrivateEventsComponent}
 
   ];
