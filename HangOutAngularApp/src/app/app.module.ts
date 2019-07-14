@@ -24,13 +24,16 @@ import { DiscountComponent } from './subscribers/discount/discount.component';
 import { BasicUserAccountInfoComponent } from './basic-user-account-info/basic-user-account-info.component';
 import { BasicUserAccountInfoFormComponent } from './basic-user-account-info/basic-user-account-info-form/basic-user-account-info-form.component';
 import { RegisterFormComponent } from './register/register-form/register-form.component';
+import { EditBasicUserAccountInfoComponent } from './edit-basic-user-account-info/edit-basic-user-account-info.component';
+import { EditBasicUserAccountInfoFormComponent } from './edit-basic-user-account-info/edit-basic-user-account-info-form/edit-basic-user-account-info-form.component';
 
 
 
 const appRoutes: Routes = [
     { path: '', component: LoginComponent},
     { path: 'BasicUserAccountInfo', component: BasicUserAccountInfoComponent},
-    { path: 'register', component: RegisterComponent}
+    { path: 'register', component: RegisterComponent},
+    { path: 'EditBasicUserAccountInfo', component: EditBasicUserAccountInfoComponent}
   ];
 
 @NgModule({
@@ -49,7 +52,9 @@ const appRoutes: Routes = [
       BasicUserAccountInfoComponent,
       BasicUserAccountInfoFormComponent,
       RegisterComponent,
-      RegisterFormComponent
+      RegisterFormComponent,
+      EditBasicUserAccountInfoComponent,
+      EditBasicUserAccountInfoFormComponent
     ],
     imports: [
       FormsModule,
