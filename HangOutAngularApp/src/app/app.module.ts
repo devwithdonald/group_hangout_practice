@@ -13,7 +13,7 @@ import { RegisterComponent } from './register/register.component';
 
 
 const appRoutes: Routes = [
-  { path: '', component: LoginComponent}
+  { path: '', component: LoginComponent },
 ];
 
 @NgModule({
