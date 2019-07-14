@@ -23,6 +23,7 @@ export class LoginFormComponent implements OnInit {
   }
 
   onRegister() {
+    // TODO information needs to be sent to the database
     console.log('register button clicked');
     this.router.navigate(['/register']);
   }
