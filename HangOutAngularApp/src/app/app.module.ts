@@ -36,6 +36,7 @@ import { BasicUserPrivateEventsComponent } from './basic-user-private-events/bas
 import { BasicUserPrivateEventsTableComponent } from './basic-user-private-events/basic-user-private-events-table/basic-user-private-events-table.component';
 import { BasicUserPrivateEventsAddEventButtonComponent } from './basic-user-private-events/basic-user-private-events-add-event-button/basic-user-private-events-add-event-button.component';
 import { BasicUserPrivateEventsUpdateEventButtonComponent } from './basic-user-private-events/basic-user-private-events-update-event-button/basic-user-private-events-update-event-button.component';
+import { UpdateBusinessEventFormComponent } from './update-business-event/update-business-event-form/update-business-event-form.component';
 
 
 const appRoutes: Routes = [
@@ -71,7 +72,9 @@ const appRoutes: Routes = [
       BasicUserPrivateEventsComponent,
       BasicUserPrivateEventsTableComponent,
       BasicUserPrivateEventsAddEventButtonComponent,
-      BasicUserPrivateEventsUpdateEventButtonComponent
+      BasicUserPrivateEventsUpdateEventButtonComponent,
+      UpdateBusinessEventFormComponent
+
     ],
     imports: [
       FormsModule,
