@@ -45,9 +45,9 @@ const appRoutes: Routes = [
     { path: '', component: LoginComponent},
     { path: 'BasicUser/ViewAccountInfo', component: BasicUserAccountInfoComponent},
     { path: 'register', component: RegisterComponent},
-    { path: 'BasicUser/EditAccountInfo', component: EditBasicUserAccountInfoComponent},
+    { path: 'BasicUser/ViewAccountInfo/EditAccountInfo', component: EditBasicUserAccountInfoComponent},
     { path: 'BasicUser/PrivateEvents', component: BasicUserPrivateEventsComponent},
-    { path: 'BasicUser/AddEvent', component: BasicUserAddEventComponent}
+    { path: 'BasicUser/PrivateEvents/AddEvent', component: BasicUserAddEventComponent}
 
   ];
 
