@@ -1,25 +1,15 @@
-.basicUserAddEventForm {
-    /* display: flex;
-    justify-content: center;  */
-    padding-top: 5%;
-    padding-bottom: 5%;
-    padding-left: 37.5%;
-    padding-right: 37.5%;
-} 
- 
 form {
-    padding: 4em;
+    margin-top: 5%;
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 40%;
     display: inline-block;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+    padding: 40px;
+  }
 
-/* h2 {
-    text-align: center;
-    padding-bottom: .5em;
-}
-
-#showPasswordButton {
-    padding: .2em;
-} */
-
+  h2{
+      text-align: center;
+      padding-bottom: .5em;
+  }
 
