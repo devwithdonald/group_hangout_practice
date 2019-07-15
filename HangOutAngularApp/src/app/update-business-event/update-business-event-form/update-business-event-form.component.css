@@ -4,6 +4,12 @@
     padding-top: 5%;
     padding-bottom: 5%;
 } 
+.BusinessEventForm{
+    display: flex;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
 
 form {
     padding: 4em;

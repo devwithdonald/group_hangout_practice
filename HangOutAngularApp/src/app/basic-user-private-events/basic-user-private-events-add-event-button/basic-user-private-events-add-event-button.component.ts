@@ -15,7 +15,7 @@ export class BasicUserPrivateEventsAddEventButtonComponent implements OnInit {
 
   onAddEvent() {
     // redirect to add events page for the basic user
-    this.router.navigate(['/BasicUser/AddEvent']);
+    this.router.navigate(['/BasicUser/PrivateEvents/AddEvent']);
   }
 
 }
