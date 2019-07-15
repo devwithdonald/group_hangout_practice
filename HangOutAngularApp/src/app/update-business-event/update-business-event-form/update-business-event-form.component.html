@@ -1,6 +1,6 @@
 <div class="accountInfo">
-    <form>
-        <h2>Udate Event Information</h2>
+    <form id = "UpdateBusinessEventForm">
+        <h2>Update Event Information</h2>
         <div class="form-group row">
             <label for="EventID" class="col-md-7 col-form-label">Event ID</label>
             <div class="col-md-5">
@@ -11,42 +11,42 @@
         <div class="form-group row">
             <label for="EventTitle" class="col-md-7 col-form-label">Event Title</label>
             <div class="col-md-5">
-                <input [value]="BusinessEventTitle" type="text" name="EventTitle"
+                <input type="text" name="EventTitle"
                     id="UpdateBusinessEventTitle">
             </div>
         </div>
         <div class="form-group row">
             <label for="EventLocation" class="col-md-7 col-form-label">Event Location</label>
             <div class="col-md-5">
-                <input [value]="EventLocation" type="text" name="BusinessEventLocation"
+                <input type="text" name="BusinessEventLocation"
                     id="UpdateBusinessEventLocation">
             </div>
         </div>
         <div class="form-group row">
             <label for="EventTime" class="col-md-7 col-form-label">Time of Event</label>
             <div class="col-md-5">
-                <input [value]="EventTime" type="text" name="BusinessEventTime"
+                <input type="text" name="BusinessEventTime"
                     id="UpdateBusinessEventTime">
             </div>
         </div>
         <div class="form-group row">
             <label for="EventDate" class="col-md-7 col-form-label">Date of Event</label>
             <div class="col-md-5">
-                <input [value]="EventDate" type="date" name="BusinessEventDate"
+                <input type="date" name="BusinessEventDate"
                     id="UpdateBusinessEventDate">
             </div>
         </div>
         <div class="form-group row">
             <label for="EventDescription" class="col-md-7 col-form-label">Description of Event</label>
             <div class="col-md-5">
-                <input [value]="EventDescription" type="textarea" name="BusinessEventDescription"
+                <input  type="textarea" name="BusinessEventDescription"
                     id="UpdateBusinessEventDescription">
             </div>
         </div>
         <div class="form-group row">
             <label for="EventBusinessMessage" class="col-md-7 col-form-label">(Optional) Business Message</label>
             <div class="col-md-5">
-                <input [value]="BusinessEventMessage" type="textarea" name="BusinessEventMessage"
+                <input type="textarea" name="BusinessEventMessage"
                     id="UpdateBusinessEventMessage">
             </div>
         </div>
