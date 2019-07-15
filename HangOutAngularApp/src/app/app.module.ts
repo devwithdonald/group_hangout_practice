@@ -33,8 +33,11 @@ import { EditBasicUserAccountInfoComponent } from './edit-basic-user-account-inf
 // tslint:disable-next-line: max-line-length
 import { EditBasicUserAccountInfoFormComponent } from './edit-basic-user-account-info/edit-basic-user-account-info-form/edit-basic-user-account-info-form.component';
 import { BasicUserPrivateEventsComponent } from './basic-user-private-events/basic-user-private-events.component';
+// tslint:disable-next-line: max-line-length
 import { BasicUserPrivateEventsTableComponent } from './basic-user-private-events/basic-user-private-events-table/basic-user-private-events-table.component';
+// tslint:disable-next-line: max-line-length
 import { BasicUserPrivateEventsAddEventButtonComponent } from './basic-user-private-events/basic-user-private-events-add-event-button/basic-user-private-events-add-event-button.component';
+// tslint:disable-next-line: max-line-length
 import { BasicUserPrivateEventsUpdateEventButtonComponent } from './basic-user-private-events/basic-user-private-events-update-event-button/basic-user-private-events-update-event-button.component';
 import { UpdateBusinessEventFormComponent } from './update-business-event/update-business-event-form/update-business-event-form.component';
 
@@ -44,7 +47,10 @@ const appRoutes: Routes = [
     { path: 'BasicUser/ViewAccountInfo', component: BasicUserAccountInfoComponent},
     { path: 'register', component: RegisterComponent},
     { path: 'BasicUser/EditAccountInfo', component: EditBasicUserAccountInfoComponent},
-    { path: 'BasicUser/PrivateEvents', component: BasicUserPrivateEventsComponent}
+    { path: 'BasicUser/PrivateEvents', component: BasicUserPrivateEventsComponent},
+    { path: 'BusinessUser/BusinessUserEventManager', component: EventManagerComponent},
+    { path: 'BusinessUser/BusinessUserEventManager/BusinessUserUpdateBusinessEvent', component: UpdateBusinessEventComponent},
+    { path: 'BusinessUser/HomePage', component: BusinessUserHomePageComponent}
 
   ];
 
