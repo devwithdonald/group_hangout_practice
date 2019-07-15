@@ -37,6 +37,8 @@ import { BasicUserPrivateEventsTableComponent } from './basic-user-private-event
 import { BasicUserPrivateEventsAddEventButtonComponent } from './basic-user-private-events/basic-user-private-events-add-event-button/basic-user-private-events-add-event-button.component';
 import { BasicUserPrivateEventsUpdateEventButtonComponent } from './basic-user-private-events/basic-user-private-events-update-event-button/basic-user-private-events-update-event-button.component';
 import { UpdateBusinessEventFormComponent } from './update-business-event/update-business-event-form/update-business-event-form.component';
+import { BasicUserAddEventComponent } from './basic-user-add-event/basic-user-add-event.component';
+import { BasicUserAddEventFormComponent } from './basic-user-add-event/basic-user-add-event-form/basic-user-add-event-form.component';
 
 
 const appRoutes: Routes = [
@@ -44,7 +46,8 @@ const appRoutes: Routes = [
     { path: 'BasicUser/ViewAccountInfo', component: BasicUserAccountInfoComponent},
     { path: 'register', component: RegisterComponent},
     { path: 'BasicUser/EditAccountInfo', component: EditBasicUserAccountInfoComponent},
-    { path: 'BasicUser/PrivateEvents', component: BasicUserPrivateEventsComponent}
+    { path: 'BasicUser/PrivateEvents', component: BasicUserPrivateEventsComponent},
+    { path: 'BasicUser/AddEvent', component: BasicUserAddEventComponent}
 
   ];
 
@@ -73,7 +76,9 @@ const appRoutes: Routes = [
       BasicUserPrivateEventsTableComponent,
       BasicUserPrivateEventsAddEventButtonComponent,
       BasicUserPrivateEventsUpdateEventButtonComponent,
-      UpdateBusinessEventFormComponent
+      UpdateBusinessEventFormComponent,
+      BasicUserAddEventComponent,
+      BasicUserAddEventFormComponent
 
     ],
     imports: [
