@@ -32,14 +32,20 @@ import { BusinessUserLoyalSubscribersViewComponent } from './business-user-home-
 import { EditBasicUserAccountInfoComponent } from './edit-basic-user-account-info/edit-basic-user-account-info.component';
 // tslint:disable-next-line: max-line-length
 import { EditBasicUserAccountInfoFormComponent } from './edit-basic-user-account-info/edit-basic-user-account-info-form/edit-basic-user-account-info-form.component';
+import { BasicUserPrivateEventsComponent } from './basic-user-private-events/basic-user-private-events.component';
+import { BasicUserPrivateEventsTableComponent } from './basic-user-private-events/basic-user-private-events-table/basic-user-private-events-table.component';
+import { BasicUserPrivateEventsAddEventButtonComponent } from './basic-user-private-events/basic-user-private-events-add-event-button/basic-user-private-events-add-event-button.component';
+import { BasicUserPrivateEventsUpdateEventButtonComponent } from './basic-user-private-events/basic-user-private-events-update-event-button/basic-user-private-events-update-event-button.component';
 import { UpdateBusinessEventFormComponent } from './update-business-event/update-business-event-form/update-business-event-form.component';
 
 
 const appRoutes: Routes = [
     { path: '', component: LoginComponent},
-    { path: 'BasicUserAccountInfo', component: BasicUserAccountInfoComponent},
+    { path: 'BasicUser/ViewAccountInfo', component: BasicUserAccountInfoComponent},
     { path: 'register', component: RegisterComponent},
-    { path: 'EditBasicUserAccountInfo', component: EditBasicUserAccountInfoComponent}
+    { path: 'BasicUser/EditAccountInfo', component: EditBasicUserAccountInfoComponent},
+    { path: 'BasicUser/PrivateEvents', component: BasicUserPrivateEventsComponent}
+
   ];
 
 @NgModule({
@@ -63,7 +69,12 @@ const appRoutes: Routes = [
       BusinessUserLoyalSubscribersViewComponent,
       EditBasicUserAccountInfoComponent,
       EditBasicUserAccountInfoFormComponent,
+      BasicUserPrivateEventsComponent,
+      BasicUserPrivateEventsTableComponent,
+      BasicUserPrivateEventsAddEventButtonComponent,
+      BasicUserPrivateEventsUpdateEventButtonComponent,
       UpdateBusinessEventFormComponent
+
     ],
     imports: [
       FormsModule,
