@@ -32,6 +32,7 @@ import { BusinessUserLoyalSubscribersViewComponent } from './business-user-home-
 import { EditBasicUserAccountInfoComponent } from './edit-basic-user-account-info/edit-basic-user-account-info.component';
 // tslint:disable-next-line: max-line-length
 import { EditBasicUserAccountInfoFormComponent } from './edit-basic-user-account-info/edit-basic-user-account-info-form/edit-basic-user-account-info-form.component';
+import { UpdateBusinessEventFormComponent } from './update-business-event/update-business-event-form/update-business-event-form.component';
 
 
 const appRoutes: Routes = [
@@ -61,7 +62,8 @@ const appRoutes: Routes = [
       BusinessUserCurrentEventViewComponent,
       BusinessUserLoyalSubscribersViewComponent,
       EditBasicUserAccountInfoComponent,
-      EditBasicUserAccountInfoFormComponent
+      EditBasicUserAccountInfoFormComponent,
+      UpdateBusinessEventFormComponent
     ],
     imports: [
       FormsModule,
