@@ -109,8 +109,6 @@ const appRoutes: Routes = [
       AddBusinessEventFormComponent,
       DiscountFormComponent
 
-
-
     ],
     imports: [
       FormsModule,
