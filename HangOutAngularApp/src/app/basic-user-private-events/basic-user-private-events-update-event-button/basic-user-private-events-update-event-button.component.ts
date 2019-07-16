@@ -17,6 +17,6 @@ export class BasicUserPrivateEventsUpdateEventButtonComponent implements OnInit 
 
   onUpdateEvent() {
     // redirect to update events page for the basic user
-    this.router.navigate(['/BasicUser/UpdateEvent']);
+    this.router.navigate(['/BasicUser/PrivateEvents/UpdateEvent']);
   }
 }
