@@ -41,10 +41,16 @@ import { BasicUserPrivateEventsAddEventButtonComponent } from './basic-user-priv
 import { BasicUserPrivateEventsUpdateEventButtonComponent } from './basic-user-private-events/basic-user-private-events-update-event-button/basic-user-private-events-update-event-button.component';
 import { UpdateBusinessEventFormComponent } from './update-business-event/update-business-event-form/update-business-event-form.component';
 import { BasicUserUpdateEventComponent } from './basic-user-update-event/basic-user-update-event.component';
+// tslint:disable-next-line: max-line-length
 import { BasicUserUpdateEventFormComponent } from './basic-user-update-event/basic-user-update-event-form/basic-user-update-event-form.component';
 import { BasicUserAddEventComponent } from './basic-user-add-event/basic-user-add-event.component';
 import { BasicUserAddEventFormComponent } from './basic-user-add-event/basic-user-add-event-form/basic-user-add-event-form.component';
+import { BasicUserAddSubscriptionComponent } from './basic-user-add-subscription/basic-user-add-subscription.component';
+import { BusinessListComponent } from './basic-user-add-subscription/business-list/business-list.component';
+// tslint:disable-next-line: max-line-length
+import { BasicUserAddBusinessSubscriptionFormComponent } from './basic-user-add-subscription/basic-user-add-business-subscription-form/basic-user-add-business-subscription-form.component';
 import { AddBusinessEventFormComponent } from './add-business-event/add-business-event-form/add-business-event-form.component';
+
 
 
 
@@ -57,9 +63,11 @@ const appRoutes: Routes = [
     { path: 'BasicUser/PrivateEvents/AddEvent', component: BasicUserAddEventComponent},
     { path: 'BusinessUser/BusinessUserEventManager', component: EventManagerComponent},
     { path: 'BusinessUser/BusinessUserEventManager/BusinessUserUpdateBusinessEvent', component: UpdateBusinessEventComponent},
+    { path: 'BasicUser/PrivateEvents/UpdateEvent', component: BasicUserUpdateEventComponent},
+    { path: 'BasicUser/Subscriptions/AddSubscription', component: BasicUserAddSubscriptionComponent},
     { path: 'BusinessUser/HomePage', component: BusinessUserHomePageComponent},
-    { path: 'BusinessUser/BusinessUserEventManager/BusinessUserAddBusinessEvent', component: AddBusinessEventComponent},
-    { path: 'BasicUser/PrivateEvents/UpdateEvent', component: BasicUserUpdateEventComponent}
+    { path: 'BusinessUser/BusinessUserEventManager/BusinessUserAddBusinessEvent', component: AddBusinessEventComponent}
+
   ];
 
 @NgModule({
@@ -92,7 +100,11 @@ const appRoutes: Routes = [
       BasicUserUpdateEventFormComponent,
       BasicUserAddEventComponent,
       BasicUserAddEventFormComponent,
+      BasicUserAddSubscriptionComponent,
+      BusinessListComponent,
+      BasicUserAddBusinessSubscriptionFormComponent,
       AddBusinessEventFormComponent
+
 
 
     ],
