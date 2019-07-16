@@ -57,7 +57,6 @@ import { BasicUserSendNewMessageButtonComponent } from './basic-user-messages/ba
 
 
 
-
 const appRoutes: Routes = [
     { path: '', component: LoginComponent},
     { path: 'BasicUser/ViewAccountInfo', component: BasicUserAccountInfoComponent},
