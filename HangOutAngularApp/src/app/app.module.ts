@@ -45,6 +45,7 @@ import { BasicUserUpdateEventFormComponent } from './basic-user-update-event/bas
 import { BasicUserAddEventComponent } from './basic-user-add-event/basic-user-add-event.component';
 import { BasicUserAddEventFormComponent } from './basic-user-add-event/basic-user-add-event-form/basic-user-add-event-form.component';
 import { BasicUserAddSubscriptionComponent } from './basic-user-add-subscription/basic-user-add-subscription.component';
+import { BusinessListComponent } from './basic-user-add-subscription/business-list/business-list.component';
 
 
 
@@ -58,7 +59,8 @@ const appRoutes: Routes = [
     { path: 'BusinessUser/BusinessUserEventManager', component: EventManagerComponent},
     { path: 'BusinessUser/BusinessUserEventManager/BusinessUserUpdateBusinessEvent', component: UpdateBusinessEventComponent},
     { path: 'BasicUser/PrivateEvents/UpdateEvent', component: BasicUserUpdateEventComponent},
-    { path: 'BusinessUser/HomePage', component: BusinessUserHomePageComponent}
+    { path: 'BusinessUser/HomePage', component: BusinessUserHomePageComponent},
+    { path: 'BasicUser/Subscriptions/AddSubscription', component: BasicUserAddSubscriptionComponent}
 
   ];
 
@@ -92,7 +94,8 @@ const appRoutes: Routes = [
       BasicUserUpdateEventFormComponent,
       BasicUserAddEventComponent,
       BasicUserAddEventFormComponent,
-      BasicUserAddSubscriptionComponent
+      BasicUserAddSubscriptionComponent,
+      BusinessListComponent
 
 
     ],
