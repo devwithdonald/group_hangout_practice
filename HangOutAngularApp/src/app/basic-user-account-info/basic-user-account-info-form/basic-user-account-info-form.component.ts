@@ -23,6 +23,6 @@ export class BasicUserAccountInfoFormComponent implements OnInit {
   // functionality for the edit button needs to be input
   onEdit() {
     // redirect to new page
-    this.router.navigate(['/EditBasicUserAccountInfo']);
+    this.router.navigate(['BasicUser/ViewAccountInfo/EditAccountInfo']);
   }
 }
