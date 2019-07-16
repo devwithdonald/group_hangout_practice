@@ -49,6 +49,8 @@ import { BasicUserAddSubscriptionComponent } from './basic-user-add-subscription
 import { BusinessListComponent } from './basic-user-add-subscription/business-list/business-list.component';
 // tslint:disable-next-line: max-line-length
 import { BasicUserAddBusinessSubscriptionFormComponent } from './basic-user-add-subscription/basic-user-add-business-subscription-form/basic-user-add-business-subscription-form.component';
+import { AddBusinessEventFormComponent } from './add-business-event/add-business-event-form/add-business-event-form.component';
+
 
 
 
@@ -62,8 +64,9 @@ const appRoutes: Routes = [
     { path: 'BusinessUser/BusinessUserEventManager', component: EventManagerComponent},
     { path: 'BusinessUser/BusinessUserEventManager/BusinessUserUpdateBusinessEvent', component: UpdateBusinessEventComponent},
     { path: 'BasicUser/PrivateEvents/UpdateEvent', component: BasicUserUpdateEventComponent},
+    { path: 'BasicUser/Subscriptions/AddSubscription', component: BasicUserAddSubscriptionComponent},
     { path: 'BusinessUser/HomePage', component: BusinessUserHomePageComponent},
-    { path: 'BasicUser/Subscriptions/AddSubscription', component: BasicUserAddSubscriptionComponent}
+    { path: 'BusinessUser/BusinessUserEventManager/BusinessUserAddBusinessEvent', component: AddBusinessEventComponent}
 
   ];
 
@@ -99,7 +102,9 @@ const appRoutes: Routes = [
       BasicUserAddEventFormComponent,
       BasicUserAddSubscriptionComponent,
       BusinessListComponent,
-      BasicUserAddBusinessSubscriptionFormComponent
+      BasicUserAddBusinessSubscriptionFormComponent,
+      AddBusinessEventFormComponent
+
 
 
     ],
