@@ -13,8 +13,8 @@ import { LoginFormComponent } from './login/login-form/login-form.component';
 import { FormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { BusinessUserHomePageComponent } from './business-user-home-page/business-user-home-page.component';
-import { EventManagerComponent } from './event-manager/event-manager.component';
-import { SubscribersComponent } from './subscribers/subscribers.component';
+import { EventManagerComponent } from './business-user-event-manager/event-manager.component';
+import { SubscribersComponent } from './business-user-subscribers/subscribers.component';
 import { EmployeeManagerComponent } from './employee-manager/employee-manager.component';
 import { AddBusinessEventComponent } from './add-business-event/add-business-event.component';
 import { BusinessUserVSPEComponent } from './business-user-vspe/business-user-vspe.component';
@@ -50,6 +50,7 @@ import { BusinessListComponent } from './basic-user-add-subscription/business-li
 // tslint:disable-next-line: max-line-length
 import { BasicUserAddBusinessSubscriptionFormComponent } from './basic-user-add-subscription/basic-user-add-business-subscription-form/basic-user-add-business-subscription-form.component';
 import { AddBusinessEventFormComponent } from './add-business-event/add-business-event-form/add-business-event-form.component';
+import { DiscountFormComponent } from './discount/discount-form/discount-form.component';
 
 
 
@@ -66,7 +67,9 @@ const appRoutes: Routes = [
     { path: 'BasicUser/PrivateEvents/UpdateEvent', component: BasicUserUpdateEventComponent},
     { path: 'BasicUser/Subscriptions/AddSubscription', component: BasicUserAddSubscriptionComponent},
     { path: 'BusinessUser/HomePage', component: BusinessUserHomePageComponent},
-    { path: 'BusinessUser/BusinessUserEventManager/BusinessUserAddBusinessEvent', component: AddBusinessEventComponent}
+    { path: 'BusinessUser/BusinessUserEventManager/BusinessUserAddBusinessEvent', component: AddBusinessEventComponent},
+    { path: 'BusinessUser/Subscribers', component: SubscribersComponent},
+    { path: 'BusinessUser/Subscribers/Discount', component: DiscountComponent}
 
   ];
 
@@ -103,7 +106,9 @@ const appRoutes: Routes = [
       BasicUserAddSubscriptionComponent,
       BusinessListComponent,
       BasicUserAddBusinessSubscriptionFormComponent,
-      AddBusinessEventFormComponent
+      AddBusinessEventFormComponent,
+      DiscountFormComponent
+
     ],
     imports: [
       FormsModule,
