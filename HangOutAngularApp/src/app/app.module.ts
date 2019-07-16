@@ -104,9 +104,6 @@ const appRoutes: Routes = [
       BusinessListComponent,
       BasicUserAddBusinessSubscriptionFormComponent,
       AddBusinessEventFormComponent
-
-
-
     ],
     imports: [
       FormsModule,
