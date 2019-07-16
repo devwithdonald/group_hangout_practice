@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-subscription-table',
@@ -7,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubscriptionTableComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+    
+  onAddSubscription() {
 
+    // redirect to add events page for the basic user
+    this.router.navigate(['/BasicUser/Subscriptions/AddSubscription']);
+  }
   ngOnInit() {
   }
 
