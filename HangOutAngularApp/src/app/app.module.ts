@@ -40,8 +40,11 @@ import { BasicUserPrivateEventsAddEventButtonComponent } from './basic-user-priv
 // tslint:disable-next-line: max-line-length
 import { BasicUserPrivateEventsUpdateEventButtonComponent } from './basic-user-private-events/basic-user-private-events-update-event-button/basic-user-private-events-update-event-button.component';
 import { UpdateBusinessEventFormComponent } from './update-business-event/update-business-event-form/update-business-event-form.component';
+import { BasicUserUpdateEventComponent } from './basic-user-update-event/basic-user-update-event.component';
+import { BasicUserUpdateEventFormComponent } from './basic-user-update-event/basic-user-update-event-form/basic-user-update-event-form.component';
 import { BasicUserAddEventComponent } from './basic-user-add-event/basic-user-add-event.component';
 import { BasicUserAddEventFormComponent } from './basic-user-add-event/basic-user-add-event-form/basic-user-add-event-form.component';
+
 
 
 const appRoutes: Routes = [
@@ -53,7 +56,9 @@ const appRoutes: Routes = [
     { path: 'BasicUser/PrivateEvents/AddEvent', component: BasicUserAddEventComponent},
     { path: 'BusinessUser/BusinessUserEventManager', component: EventManagerComponent},
     { path: 'BusinessUser/BusinessUserEventManager/BusinessUserUpdateBusinessEvent', component: UpdateBusinessEventComponent},
+    { path: 'BasicUser/PrivateEvents/UpdateEvent', component: BasicUserUpdateEventComponent},
     { path: 'BusinessUser/HomePage', component: BusinessUserHomePageComponent}
+
   ];
 
 @NgModule({
@@ -82,8 +87,11 @@ const appRoutes: Routes = [
       BasicUserPrivateEventsAddEventButtonComponent,
       BasicUserPrivateEventsUpdateEventButtonComponent,
       UpdateBusinessEventFormComponent,
+      BasicUserUpdateEventComponent,
+      BasicUserUpdateEventFormComponent,
       BasicUserAddEventComponent,
       BasicUserAddEventFormComponent
+
 
     ],
     imports: [
