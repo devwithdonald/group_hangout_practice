@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BasicUserSendNewMessageFormComponent implements OnInit {
 
+  private receiver: string;
+  private message: string;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSendMessage() {
+    // TODO should check if receiver exists via a service!
+    console.log(`receiver: ${this.receiver}`);
+
+    console.log(`message: ${this.message}`);
   }
 
 }
