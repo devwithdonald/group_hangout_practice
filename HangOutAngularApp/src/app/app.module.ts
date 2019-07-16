@@ -51,6 +51,10 @@ import { BusinessListComponent } from './basic-user-add-subscription/business-li
 import { BasicUserAddBusinessSubscriptionFormComponent } from './basic-user-add-subscription/basic-user-add-business-subscription-form/basic-user-add-business-subscription-form.component';
 import { AddBusinessEventFormComponent } from './add-business-event/add-business-event-form/add-business-event-form.component';
 import { DiscountFormComponent } from './discount/discount-form/discount-form.component';
+import { BasicUserHomepageComponent } from './basic-user-homepage/basic-user-homepage.component';
+import { BasicUserSubscribedBusinessComponent } from './basic-user-homepage/basic-user-subscribed-business/basic-user-subscribed-business.component';
+import { BasicUserFriendsEventsComponent } from './basic-user-homepage/basic-user-friends-events/basic-user-friends-events.component';
+import { BasicUserFriendsMessagesComponent } from './basic-user-homepage/basic-user-friends-messages/basic-user-friends-messages.component';
 
 
 
@@ -69,7 +73,8 @@ const appRoutes: Routes = [
     { path: 'BusinessUser/HomePage', component: BusinessUserHomePageComponent},
     { path: 'BusinessUser/BusinessUserEventManager/BusinessUserAddBusinessEvent', component: AddBusinessEventComponent},
     { path: 'BusinessUser/Subscribers', component: SubscribersComponent},
-    { path: 'BusinessUser/Subscribers/Discount', component: DiscountComponent}
+    { path: 'BusinessUser/Subscribers/Discount', component: DiscountComponent},
+    { path: 'BasicUser/Homepage', component: BasicUserHomepageComponent}
 
   ];
 
@@ -107,7 +112,11 @@ const appRoutes: Routes = [
       BusinessListComponent,
       BasicUserAddBusinessSubscriptionFormComponent,
       AddBusinessEventFormComponent,
-      DiscountFormComponent
+      DiscountFormComponent,
+      BasicUserHomepageComponent,
+      BasicUserSubscribedBusinessComponent,
+      BasicUserFriendsEventsComponent,
+      BasicUserFriendsMessagesComponent
 
     ],
     imports: [
