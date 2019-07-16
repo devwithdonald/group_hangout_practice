@@ -42,6 +42,7 @@ import { BasicUserPrivateEventsUpdateEventButtonComponent } from './basic-user-p
 import { UpdateBusinessEventFormComponent } from './update-business-event/update-business-event-form/update-business-event-form.component';
 import { BasicUserAddEventComponent } from './basic-user-add-event/basic-user-add-event.component';
 import { BasicUserAddEventFormComponent } from './basic-user-add-event/basic-user-add-event-form/basic-user-add-event-form.component';
+import { AddBusinessEventFormComponent } from './add-business-event/add-business-event-form/add-business-event-form.component';
 
 
 const appRoutes: Routes = [
@@ -53,7 +54,8 @@ const appRoutes: Routes = [
     { path: 'BasicUser/PrivateEvents/AddEvent', component: BasicUserAddEventComponent},
     { path: 'BusinessUser/BusinessUserEventManager', component: EventManagerComponent},
     { path: 'BusinessUser/BusinessUserEventManager/BusinessUserUpdateBusinessEvent', component: UpdateBusinessEventComponent},
-    { path: 'BusinessUser/HomePage', component: BusinessUserHomePageComponent}
+    { path: 'BusinessUser/HomePage', component: BusinessUserHomePageComponent},
+    { path: 'BusinessUser/BusinessUserEventManager/BusinessUserAddBusinessEvent', component: AddBusinessEventComponent}
   ];
 
 @NgModule({
@@ -83,7 +85,8 @@ const appRoutes: Routes = [
       BasicUserPrivateEventsUpdateEventButtonComponent,
       UpdateBusinessEventFormComponent,
       BasicUserAddEventComponent,
-      BasicUserAddEventFormComponent
+      BasicUserAddEventFormComponent,
+      AddBusinessEventFormComponent
 
     ],
     imports: [
