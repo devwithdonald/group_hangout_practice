@@ -53,7 +53,9 @@ import { AddBusinessEventFormComponent } from './add-business-event/add-business
 import { DiscountFormComponent } from './discount/discount-form/discount-form.component';
 import { BasicUserSendNewMessageComponent } from './basic-user-send-new-message/basic-user-send-new-message.component';
 import { BasicUserSendNewMessageFormComponent } from './basic-user-send-new-message/basic-user-send-new-message-form/basic-user-send-new-message-form.component';
-
+import { BasicUserMessagesComponent } from './basic-user-messages/basic-user-messages.component';
+import { BasicUserMessagesTableComponent } from './basic-user-messages/basic-user-messages-table/basic-user-messages-table.component';
+import { BasicUserSendNewMessageButtonComponent } from './basic-user-messages/basic-user-send-new-message-button/basic-user-send-new-message-button.component';
 
 
 
@@ -72,8 +74,8 @@ const appRoutes: Routes = [
     { path: 'BusinessUser/BusinessUserEventManager/BusinessUserAddBusinessEvent', component: AddBusinessEventComponent},
     { path: 'BusinessUser/Subscribers', component: SubscribersComponent},
     { path: 'BusinessUser/Subscribers/Discount', component: DiscountComponent},
-    { path: 'BasicUser/Messages/SendNewMessage', component: BasicUserSendNewMessageComponent}
-
+    { path: 'BasicUser/Messages/SendNewMessage', component: BasicUserSendNewMessageComponent},
+    { path: 'BasicUser/Messages', component: BasicUserMessagesComponent}
   ];
 
 @NgModule({
@@ -112,7 +114,10 @@ const appRoutes: Routes = [
       AddBusinessEventFormComponent,
       DiscountFormComponent,
       BasicUserSendNewMessageComponent,
-      BasicUserSendNewMessageFormComponent
+      BasicUserSendNewMessageFormComponent,
+      BasicUserMessagesComponent,
+      BasicUserMessagesTableComponent,
+      BasicUserSendNewMessageButtonComponent
 
     ],
     imports: [
