@@ -51,12 +51,20 @@ import { BusinessListComponent } from './basic-user-add-subscription/business-li
 import { BasicUserAddBusinessSubscriptionFormComponent } from './basic-user-add-subscription/basic-user-add-business-subscription-form/basic-user-add-business-subscription-form.component';
 import { AddBusinessEventFormComponent } from './add-business-event/add-business-event-form/add-business-event-form.component';
 import { DiscountFormComponent } from './discount/discount-form/discount-form.component';
+import { BasicUserSendNewMessageComponent } from './basic-user-send-new-message/basic-user-send-new-message.component';
+import { BasicUserSendNewMessageFormComponent } from './basic-user-send-new-message/basic-user-send-new-message-form/basic-user-send-new-message-form.component';
+import { BasicUserHomepageComponent } from './basic-user-homepage/basic-user-homepage.component';
+// tslint:disable-next-line: max-line-length
+import { BasicUserSubscribedBusinessComponent } from './basic-user-homepage/basic-user-subscribed-business/basic-user-subscribed-business.component';
+import { BasicUserFriendsEventsComponent } from './basic-user-homepage/basic-user-friends-events/basic-user-friends-events.component';
+import { BasicUserFriendsMessagesComponent } from './basic-user-homepage/basic-user-friends-messages/basic-user-friends-messages.component';
 import { SubscriptionComponent } from './subscription/subscription.component';
 import { SubscriptionTableComponent } from './subscription/subscription-table/subscription-table.component';
 import { BasicUserMessagesComponent } from './basic-user-messages/basic-user-messages.component';
 import { BasicUserMessagesTableComponent } from './basic-user-messages/basic-user-messages-table/basic-user-messages-table.component';
 // tslint:disable-next-line: max-line-length
 import { BasicUserSendNewMessageButtonComponent } from './basic-user-messages/basic-user-send-new-message-button/basic-user-send-new-message-button.component';
+
 
 
 
@@ -76,9 +84,10 @@ const appRoutes: Routes = [
     { path: 'BusinessUser/BusinessUserEventManager/BusinessUserAddBusinessEvent', component: AddBusinessEventComponent},
     { path: 'BusinessUser/Subscribers', component: SubscribersComponent},
     { path: 'BusinessUser/Subscribers/Discount', component: DiscountComponent},
+    { path: 'BasicUser/Messages/SendNewMessage', component: BasicUserSendNewMessageComponent},
+    { path: 'BasicUser/Messages', component: BasicUserMessagesComponent},
+    { path: 'BasicUser/Homepage', component: BasicUserHomepageComponent},
     { path: 'BasicUser/Subscriptions', component: SubscriptionComponent},
-    { path: 'BasicUser/Messages', component: BasicUserMessagesComponent}
-
 
   ];
 
@@ -117,6 +126,12 @@ const appRoutes: Routes = [
       BasicUserAddBusinessSubscriptionFormComponent,
       AddBusinessEventFormComponent,
       DiscountFormComponent,
+      BasicUserSendNewMessageComponent,
+      BasicUserSendNewMessageFormComponent,
+      BasicUserHomepageComponent,
+      BasicUserSubscribedBusinessComponent,
+      BasicUserFriendsEventsComponent,
+      BasicUserFriendsMessagesComponent,
       SubscriptionComponent,
       SubscriptionTableComponent,
       BasicUserMessagesComponent,
