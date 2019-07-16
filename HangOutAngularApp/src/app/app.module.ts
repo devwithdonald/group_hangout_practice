@@ -53,6 +53,7 @@ import { AddBusinessEventFormComponent } from './add-business-event/add-business
 import { DiscountFormComponent } from './discount/discount-form/discount-form.component';
 import { BasicUserMessagesComponent } from './basic-user-messages/basic-user-messages.component';
 import { BasicUserMessagesTableComponent } from './basic-user-messages/basic-user-messages-table/basic-user-messages-table.component';
+import { BasicUserSendNewMessageButtonComponent } from './basic-user-messages/basic-user-send-new-message-button/basic-user-send-new-message-button.component';
 
 
 
@@ -112,7 +113,8 @@ const appRoutes: Routes = [
       AddBusinessEventFormComponent,
       DiscountFormComponent,
       BasicUserMessagesComponent,
-      BasicUserMessagesTableComponent
+      BasicUserMessagesTableComponent,
+      BasicUserSendNewMessageButtonComponent
 
     ],
     imports: [
