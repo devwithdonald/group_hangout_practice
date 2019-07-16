@@ -51,20 +51,18 @@ import { BusinessListComponent } from './basic-user-add-subscription/business-li
 import { BasicUserAddBusinessSubscriptionFormComponent } from './basic-user-add-subscription/basic-user-add-business-subscription-form/basic-user-add-business-subscription-form.component';
 import { AddBusinessEventFormComponent } from './add-business-event/add-business-event-form/add-business-event-form.component';
 import { DiscountFormComponent } from './discount/discount-form/discount-form.component';
-<<<<<<< HEAD
 import { BasicUserHomepageComponent } from './basic-user-homepage/basic-user-homepage.component';
 // tslint:disable-next-line: max-line-length
 import { BasicUserSubscribedBusinessComponent } from './basic-user-homepage/basic-user-subscribed-business/basic-user-subscribed-business.component';
 import { BasicUserFriendsEventsComponent } from './basic-user-homepage/basic-user-friends-events/basic-user-friends-events.component';
 import { BasicUserFriendsMessagesComponent } from './basic-user-homepage/basic-user-friends-messages/basic-user-friends-messages.component';
-=======
 import { SubscriptionComponent } from './subscription/subscription.component';
 import { SubscriptionTableComponent } from './subscription/subscription-table/subscription-table.component';
 import { BasicUserMessagesComponent } from './basic-user-messages/basic-user-messages.component';
 import { BasicUserMessagesTableComponent } from './basic-user-messages/basic-user-messages-table/basic-user-messages-table.component';
 // tslint:disable-next-line: max-line-length
 import { BasicUserSendNewMessageButtonComponent } from './basic-user-messages/basic-user-send-new-message-button/basic-user-send-new-message-button.component';
->>>>>>> master
+
 
 
 
