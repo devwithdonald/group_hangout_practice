@@ -52,6 +52,7 @@ import { BasicUserAddBusinessSubscriptionFormComponent } from './basic-user-add-
 import { AddBusinessEventFormComponent } from './add-business-event/add-business-event-form/add-business-event-form.component';
 import { DiscountFormComponent } from './discount/discount-form/discount-form.component';
 import { BasicUserHomepageComponent } from './basic-user-homepage/basic-user-homepage.component';
+// tslint:disable-next-line: max-line-length
 import { BasicUserSubscribedBusinessComponent } from './basic-user-homepage/basic-user-subscribed-business/basic-user-subscribed-business.component';
 import { BasicUserFriendsEventsComponent } from './basic-user-homepage/basic-user-friends-events/basic-user-friends-events.component';
 import { BasicUserFriendsMessagesComponent } from './basic-user-homepage/basic-user-friends-messages/basic-user-friends-messages.component';
